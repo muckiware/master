@@ -27,12 +27,8 @@ import CustomFieldService from 'src/app/service/custom-field.service';
 import ExtensionHelperService from 'src/app/service/extension-helper.service';
 import LanguageAutoFetchingService from 'src/app/service/language-auto-fetching.service';
 import SearchTypeService from 'src/app/service/search-type.service';
-import LicenseViolationsService from 'src/app/service/license-violations.service';
 import ShortcutService from 'src/app/service/shortcut.service';
 import LocaleToLanguageService from 'src/app/service/locale-to-language.service';
-import addPluginUpdatesListener from 'src/core/service/plugin-updates-listener.service';
-import addShopwareUpdatesListener from 'src/core/service/shopware-updates-listener.service';
-import addCustomerGroupRegistrationListener from 'src/core/service/customer-group-registration-listener.service';
 import LocaleHelperService from 'src/app/service/locale-helper.service';
 import FilterService from 'src/app/service/filter.service';
 import AppCmsService from 'src/app/service/app-cms.service';
@@ -45,7 +41,6 @@ import RecentlySearchService from 'src/app/service/recently-search.service';
 import UserActivityService from 'src/app/service/user-activity.service';
 import EntityValidationService from 'src/app/service/entity-validation.service';
 import CustomEntityDefinitionService from 'src/app/service/custom-entity-definition.service';
-import addUsageDataConsentListener from 'src/core/service/usage-data-consent-listener.service';
 import FileValidationService from 'src/app/service/file-validation.service';
 
 /** Import Feature */
@@ -126,11 +121,6 @@ Application.addServiceProvider('feature', () => {
 
         const loginService = LoginService(initContainer.httpClient, Shopware.Context.api);
 
-        addPluginUpdatesListener(loginService, serviceContainer);
-        addShopwareUpdatesListener(loginService, serviceContainer);
-        addCustomerGroupRegistrationListener(loginService);
-        addUsageDataConsentListener(loginService, serviceContainer);
-
         return loginService;
     })
     .addServiceProvider('jsonApiParserService', () => {
@@ -183,9 +173,6 @@ Application.addServiceProvider('feature', () => {
     .addServiceProvider('shortcutService', () => {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         return new ShortcutService(factoryContainer.shortcut);
-    })
-    .addServiceProvider('licenseViolationService', () => {
-        return LicenseViolationsService(Application.getContainer('service').storeService);
     })
     .addServiceProvider('localeHelper', () => {
         return new LocaleHelperService({

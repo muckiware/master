@@ -48,7 +48,6 @@ export default () => {
     );
     Shopware.Component.register('sw-loader-deprecated', () => import('src/app/component/utils/sw-loader-deprecated/index'));
     Shopware.Component.register('sw-loader', () => import('src/app/component/utils/sw-loader/index'));
-    Shopware.Component.register('sw-license-violation', () => import('src/app/component/utils/sw-license-violation/index'));
     Shopware.Component.register('sw-internal-link', () => import('src/app/component/utils/sw-internal-link/index'));
     Shopware.Component.register('sw-inherit-wrapper', () => import('src/app/component/utils/sw-inherit-wrapper/index'));
     Shopware.Component.register('sw-ignore-class', () => import('src/app/component/utils/sw-ignore-class/index'));
