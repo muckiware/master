@@ -1,0 +1,84 @@
+@import "~scss/variables";
+
+$sw-tooltip-z-index: $z-index-tooltip;
+$sw-tooltip-color-background: var(--color-elevation-surface-floating);
+$sw-tooltip-color: var(--color-text-inverse-default);
+$sw-tooltip-border-radius: var(--border-radius-overlay);
+$sw-tooltip-color-light: $color-darkgray-200;
+$sw-tooltip-border-color-light: $color-gray-300;
+
+.sw-tooltip {
+    position: absolute;
+    z-index: $sw-tooltip-z-index;
+
+    &.sw-tooltip--dark {
+        background-color: var(--color-elevation-surface-floating);
+        border-radius: var(--border-radius-xs);
+        color: var(--color-text-inverse-default);
+        padding: var(--scale-size-12);
+        font-size: var(--font-size-2xs);
+        word-wrap: break-word;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            transform: rotate(45deg);
+            background: $sw-tooltip-color-background;
+        }
+
+        &.sw-tooltip--top::before {
+            bottom: -4px;
+            margin-left: -4px;
+            left: 50%;
+        }
+
+        &.sw-tooltip--bottom::before {
+            top: -4px;
+            margin-left: -4px;
+            left: 50%;
+        }
+
+        &.sw-tooltip--left::before {
+            top: 50%;
+            margin-top: -4px;
+            right: -4px;
+        }
+
+        &.sw-tooltip--right::before {
+            top: 50%;
+            margin-top: -4px;
+            left: -4px;
+        }
+    }
+
+    &.sw-tooltip--light {
+        color: var(--color-text-inverse-default);
+        font-size: var(--font-size-2xs);
+        font-weight: var(--font-weight-regular);
+        line-height: var(--font-line-height-2xs);
+        width: auto !important;
+        height: auto !important;
+        padding: 5px 10px;
+        background: var(--color-elevation-surface-floating);
+        box-shadow: 0 3px 6px 0 var(--color-elevation-shadow-default);
+        border-radius: var(--border-radius-xs);
+
+        &.sw-tooltip--top {
+            margin-top: 6px;
+        }
+
+        &.sw-tooltip--bottom {
+            margin-top: -4px;
+        }
+
+        &.sw-tooltip--left {
+            margin-left: 5px;
+        }
+
+        &.sw-tooltip--right {
+            margin-right: -5px;
+        }
+    }
+}

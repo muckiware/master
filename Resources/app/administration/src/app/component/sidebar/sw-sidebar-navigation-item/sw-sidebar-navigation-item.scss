@@ -1,0 +1,91 @@
+@import "~scss/variables";
+
+$sw-sidebar-navigation-item-icon-color: var(--color-icon-primary-default);
+$sw-sidebar-navigation-item-icon-color-active: var(--color-icon-brand-default);
+$sw-sidebar-navigation-item-hover-color-background: var(--color-background-brand-default);
+$sw-sidebar-navigation-item-active-color-background: var(--color-background-brand-default);
+$sw-sidebar-navigation-item-size: var(--scale-size-64);
+$sw-sidebar-navigation-item-badge-color-info: var(--color-icon-brand-default);
+$sw-sidebar-navigation-item-badge-color-warning: var(--color-icon-attention-default);
+$sw-sidebar-navigation-item-badge-color-error: var(--color-icon-critical-default);
+$sw-sidebar-navigation-item-badge-color-success: var(--color-icon-positive-default);
+
+.sw-sidebar-navigation-item {
+    position: relative;
+    width: $sw-sidebar-navigation-item-size;
+    height: $sw-sidebar-navigation-item-size;
+    border: none;
+    color: $sw-sidebar-navigation-item-icon-color;
+    background: none;
+    cursor: pointer;
+    outline: none;
+
+    &:focus-visible {
+        outline: var(--scale-size-2) solid var(--color-border-brand-selected);
+        outline-offset: calc(var(--scale-size-2) * -1);
+    }
+
+    &:hover:not(.is--disabled) {
+        color: $sw-sidebar-navigation-item-icon-color-active;
+    }
+
+    &.is--active {
+        background: $sw-sidebar-navigation-item-active-color-background;
+        color: $sw-sidebar-navigation-item-icon-color-active;
+        width: 64px;
+        height: 64px;
+    }
+
+    &.is--disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+        width: 64px;
+        height: 64px;
+    }
+
+    .mt-icon {
+        width: 20px;
+        height: 20px;
+        padding-top: 1px;
+        padding-right: 1px;
+        padding-bottom: 1px;
+        padding-left: 1px;
+    }
+
+    .sidebar-item-badge {
+        position: absolute;
+        transform: translate(-30%, 70%);
+        border-radius: 18px;
+        color: var(--color-text-static-default);
+        font-size: $font-size-xxs;
+        font-style: normal;
+
+        &.is--info {
+            background-color: $sw-sidebar-navigation-item-badge-color-info;
+        }
+
+        &.is--warning {
+            background-color: $sw-sidebar-navigation-item-badge-color-warning;
+        }
+
+        &.is--error {
+            background-color: $sw-sidebar-navigation-item-badge-color-error;
+        }
+
+        &.is--success {
+            background-color: $sw-sidebar-navigation-item-badge-color-success;
+        }
+    }
+
+    .notification--badge {
+        top: 0;
+        right: 0;
+        padding: 2px 8px;
+    }
+
+    .dot--badge {
+        top: 8px;
+        right: 10px;
+        padding: 4px;
+    }
+}
