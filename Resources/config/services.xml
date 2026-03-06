@@ -80,18 +80,6 @@
             </call>
         </service>
 
-        <service id="Muckiware\Master\Controller\AdminProductStreamController"
-                 public="true">
-            <argument type="service" id="Shopware\Core\Content\Product\ProductDefinition"/>
-            <argument type="service" id="sales_channel.product.repository"/>
-            <argument type="service" id="Shopware\Core\System\SalesChannel\Context\SalesChannelContextService"/>
-            <argument type="service" id="Shopware\Core\Framework\DataAbstractionLayer\Search\RequestCriteriaBuilder"/>
-
-            <call method="setContainer">
-                <argument type="service" id="service_container"/>
-            </call>
-        </service>
-
         <service id="Muckiware\Master\Controller\AdminTagController"
                  public="true">
             <argument type="service" id="Shopware\Core\System\Tag\Service\FilterTagIdsService"/>
