@@ -59,7 +59,6 @@ export default async function (): Promise<void> {
             platform: false,
         },
         fetchRemoteConfig: false,
-        // serverUrl: use proxy server url here, e.g. usage-data.shopware.io/product-analytics,
     });
 
     // eslint-disable-next-line listeners/no-missing-remove-event-listener
