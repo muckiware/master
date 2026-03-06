@@ -8,14 +8,6 @@ Shopware.Component.register('sw-settings-services-index', () => import('./page/s
  * @private
  */
 Shopware.Component.register(
-    'sw-settings-services-dashboard-banner',
-    () => import('./component/sw-settings-services-dashboard-banner'),
-);
-
-/**
- * @private
- */
-Shopware.Component.register(
     'sw-settings-services-grant-permissions-modal',
     () => import('./component/sw-settings-services-grant-permissions-modal'),
 );
