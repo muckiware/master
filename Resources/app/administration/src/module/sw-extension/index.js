@@ -8,13 +8,7 @@ initState(Shopware);
 /* eslint-disable max-len, sw-deprecation-rules/private-feature-declarations */
 Shopware.Component.register('sw-extension-config', () => import('./page/sw-extension-config'));
 Shopware.Component.register('sw-extension-my-extensions-listing', () => import('./page/sw-extension-my-extensions-listing'));
-Shopware.Component.register('sw-extension-my-extensions-account', () => import('./page/sw-extension-my-extensions-account'));
 Shopware.Component.register('sw-extension-my-extensions-index', () => import('./page/sw-extension-my-extensions-index'));
-Shopware.Component.register('sw-extension-store-landing-page', () => import('./page/sw-extension-store-landing-page'));
-Shopware.Component.register(
-    'sw-extension-my-extensions-recommendation',
-    () => import('./page/sw-extension-my-extensions-recommendation'),
-);
 Shopware.Component.register('sw-extension-file-upload', () => import('./component/sw-extension-file-upload'));
 Shopware.Component.register(
     'sw-extension-permissions-details-modal',
@@ -155,20 +149,6 @@ Shopware.Module.register('sw-extension', {
                         },
                     },
                 },
-                recommendation: {
-                    path: 'recommendation',
-                    component: 'sw-extension-my-extensions-recommendation',
-                    meta: {
-                        privilege: 'system.plugin_maintain',
-                    },
-                },
-                account: {
-                    path: 'account',
-                    component: 'sw-extension-my-extensions-account',
-                    meta: {
-                        privilege: 'system.plugin_maintain',
-                    },
-                },
             },
         },
         config: {
@@ -184,19 +164,6 @@ Shopware.Module.register('sw-extension', {
                     return { namespace: route.params.namespace };
                 },
             },
-        },
-
-        store: {
-            path: 'store',
-            component: 'sw-extension-store-landing-page',
-            redirect: {
-                name: 'sw.extension.store.landing-page',
-            },
-        },
-
-        'store.landing-page': {
-            path: 'store/landing-page',
-            component: 'sw-extension-store-landing-page',
         },
 
         module: {
@@ -221,14 +188,6 @@ Shopware.Module.register('sw-extension', {
             color: '#189EFF',
             icon: 'regular-plug',
             position: 70,
-        },
-        {
-            id: 'sw-extension-store',
-            parent: 'sw-extension',
-            label: 'sw-extension.mainMenu.store',
-            path: 'sw.extension.store',
-            privilege: 'system.extension_store',
-            position: 10,
         },
         {
             id: 'sw-extension-my-extensions',
