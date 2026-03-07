@@ -18,7 +18,7 @@
 
     &.deactivate-prevented {
         .mt-switch .mt-switch__switch {
-            background: $color-shopware-brand-500;
+            background: $color-muckiware-brand-500;
             opacity: 0.5;
 
             &::after {
@@ -85,7 +85,7 @@
         text-align: right;
 
         a {
-            color: $color-shopware-brand-500;
+            color: $color-muckiware-brand-500;
             margin-left: 4px;
         }
 
@@ -97,12 +97,12 @@
     .sw-extension-card-base__open-extension {
         cursor: pointer;
         text-decoration: underline;
-        color: $color-shopware-brand-500;
+        color: $color-muckiware-brand-500;
         transition: color 0.1s ease;
         font-weight: $font-weight-medium;
 
         &:hover {
-            color: $color-shopware-brand-800;
+            color: $color-muckiware-brand-800;
         }
     }
 }

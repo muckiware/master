@@ -126,13 +126,13 @@
             background: transparent;
 
             &:hover:not([disabled]) {
-                color: $color-shopware-brand-500;
+                color: $color-muckiware-brand-500;
                 background: $color-gray-50;
             }
 
             &.is--selected {
                 background: $color-gray-50;
-                color: $color-shopware-brand-500;
+                color: $color-muckiware-brand-500;
                 cursor: auto;
             }
 

@@ -14,8 +14,8 @@
     cursor: move;
 
     &.is--drag-element {
-        border: 1px solid $color-shopware-brand-500;
-        box-shadow: 0 0 4px 0 rgba($color-shopware-brand-500, 0.4);
+        border: 1px solid $color-muckiware-brand-500;
+        box-shadow: 0 0 4px 0 rgba($color-muckiware-brand-500, 0.4);
 
         .navigator-element__action-duplicate,
         .navigator-element__action-delete {
@@ -33,7 +33,7 @@
         cursor: pointer;
 
         &:hover {
-            color: $color-shopware-brand-500;
+            color: $color-muckiware-brand-500;
         }
     }
 }

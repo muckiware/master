@@ -128,7 +128,7 @@ $sw-label-pill-border-radius: 50px;
 
     &.sw-label--info:not(&--appearance-badged) {
         /* stylelint-disable-next-line max-line-length */
-        @include sw-label-variant($color-shopware-brand-50, $color-shopware-brand-500, $color-shopware-brand-500, $color-shopware-brand-100);
+        @include sw-label-variant($color-muckiware-brand-50, $color-muckiware-brand-500, $color-muckiware-brand-500, $color-muckiware-brand-100);
     }
 
     &.sw-label--success:not(&--appearance-badged) {
@@ -154,6 +154,6 @@ $sw-label-pill-border-radius: 50px;
 
     &.sw-label--primary:not(&--appearance-badged) {
         /* stylelint-disable-next-line max-line-length */
-        @include sw-label-variant($color-shopware-brand-500, $color-shopware-brand-50, $color-shopware-brand-700, $color-shopware-brand-500);
+        @include sw-label-variant($color-muckiware-brand-500, $color-muckiware-brand-50, $color-muckiware-brand-700, $color-muckiware-brand-500);
     }
 }

@@ -26,15 +26,15 @@
         left: 0;
         right: 0;
         margin: auto;
-        border: 1px solid $color-shopware-brand-500;
-        box-shadow: 0 0 4px 0 rgba($color-shopware-brand-500, 0.3);
+        border: 1px solid $color-muckiware-brand-500;
+        box-shadow: 0 0 4px 0 rgba($color-muckiware-brand-500, 0.3);
         pointer-events: none;
         z-index: 210;
     }
 
     .sw-cms-slot__preview-overlay {
         display: none;
-        border: 1px dashed rgba($color-shopware-brand-500, 0.4);
+        border: 1px dashed rgba($color-muckiware-brand-500, 0.4);
         box-shadow: none;
     }
 
@@ -50,7 +50,7 @@
         top: -1px;
         right: -1px;
         background: $color-white;
-        border: 1px solid $color-shopware-brand-500;
+        border: 1px solid $color-muckiware-brand-500;
         border-bottom-left-radius: 4px;
     }
 
@@ -71,7 +71,7 @@
         }
 
         &:hover {
-            color: $color-shopware-brand-500;
+            color: $color-muckiware-brand-500;
         }
     }
 
@@ -125,8 +125,8 @@
         cursor: pointer;
 
         &:hover {
-            border-color: $color-shopware-brand-500;
-            box-shadow: 0 0 4px 0 rgba($color-shopware-brand-500, 0.4);
+            border-color: $color-muckiware-brand-500;
+            box-shadow: 0 0 4px 0 rgba($color-muckiware-brand-500, 0.4);
 
             .element-selection__overlay {
                 display: grid;

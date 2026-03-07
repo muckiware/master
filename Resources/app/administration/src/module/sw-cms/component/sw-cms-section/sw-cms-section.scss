@@ -57,11 +57,11 @@
     justify-items: center;
 
     &.is--active {
-        border-color: $color-shopware-brand-500;
+        border-color: $color-muckiware-brand-500;
 
         .sw-cms-section__actions {
             .mt-icon {
-                color: $color-shopware-brand-500;
+                color: $color-muckiware-brand-500;
             }
         }
     }
@@ -145,8 +145,8 @@
             border: 2px dashed $color-gray-300;
 
             &.is--valid-drop {
-                background-color: $color-shopware-brand-50;
-                border-color: $color-shopware-brand-500;
+                background-color: $color-muckiware-brand-50;
+                border-color: $color-muckiware-brand-500;
             }
 
             .mt-icon {

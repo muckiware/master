@@ -7,13 +7,13 @@
 
     &__searchable-content-show-example-link,
     &__searchable-content-rebuild-link {
-        color: $color-shopware-brand-500;
+        color: $color-muckiware-brand-500;
         font-size: $font-size-xs;
         cursor: pointer;
         text-decoration: underline;
 
         &:hover {
-            color: $color-shopware-brand-600;
+            color: $color-muckiware-brand-600;
         }
     }
 
@@ -92,8 +92,8 @@
         }
 
         &:hover {
-            background: lighten($color-shopware-brand-500, 40%);
-            color: $color-shopware-brand-500;
+            background: lighten($color-muckiware-brand-500, 40%);
+            color: $color-muckiware-brand-500;
         }
     }
 }

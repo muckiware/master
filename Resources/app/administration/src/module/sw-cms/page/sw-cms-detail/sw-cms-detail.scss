@@ -28,7 +28,7 @@
         color: $color-darkgray-200;
 
         &:hover {
-            color: $color-shopware-brand-500;
+            color: $color-muckiware-brand-500;
         }
 
         .mt-icon {
@@ -76,7 +76,7 @@
             }
 
             &.is--active {
-                color: $color-shopware-brand-500;
+                color: $color-muckiware-brand-500;
             }
 
             &.is--disabled {
@@ -152,8 +152,8 @@
             cursor: auto;
 
             &.is--valid-drop {
-                background-color: $color-shopware-brand-50;
-                border-color: $color-shopware-brand-500;
+                background-color: $color-muckiware-brand-50;
+                border-color: $color-muckiware-brand-500;
             }
 
             .sw-cms-detail__empty-stage-content {

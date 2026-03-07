@@ -27,8 +27,8 @@
             cursor: pointer;
 
             &:hover {
-                color: $color-shopware-brand-500;
-                border-color: $color-shopware-brand-500;
+                color: $color-muckiware-brand-500;
+                border-color: $color-muckiware-brand-500;
             }
         }
 
@@ -54,7 +54,7 @@
             position: relative;
 
             &.is--selected .sw-cms-list-item {
-                border-color: $color-shopware-brand-500;
+                border-color: $color-muckiware-brand-500;
             }
 
             .mt-field--checkbox {
