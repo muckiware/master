@@ -153,8 +153,8 @@
     "sw-admin-menu": {
       "linkLogout": "Logout",
       "linkMinimizeMenu": "Collapse menu",
-      "textShopwareAdmin": "Shopware Administration",
-      "textProjectName": "Administration",
+      "textShopwareAdmin": "Muckiware Administration",
+      "textProjectName": "Master",
       "administrator": "Administrator",
       "navigation": {
         "label": "Main navigation",
