@@ -69,14 +69,6 @@
             <p v-else>
                 {{ $tc('sw-extension-store.component.sw-extension-my-extensions-listing.apps.textEmptyState') }}
             </p>
-
-            <mt-button
-                ghost
-                variant="secondary"
-                @click="isThemeRoute ? openThemesStore() : openStore()"
-            >
-                {{ $tc('sw-extension-store.component.sw-extension-my-extensions-listing.btnOpenStore') }}
-            </mt-button>
         </sw-meteor-card>
 
         {% endblock %}
