@@ -28,10 +28,10 @@ $sw-login-error-animation-duration: 0.15s;
 
     .sw-login__container {
         background: $color-white;
-        width: 1120px;
+        width: 50%;
         min-height: 590px;
         display: grid;
-        grid-template-columns: auto 480px;
+        grid-template-columns: auto;
         transition: all $sw-login-success-animation-duration ease-in-out;
         transform: scale(1);
 
@@ -49,7 +49,7 @@ $sw-login-error-animation-duration: 0.15s;
     .sw-login__content {
         min-width: 320px;
         padding: 130px 50px;
-        position: relative;
+        //position: relative;
         opacity: 1;
         transition:
             opacity $sw-login-success-animation-duration ease-in-out,
@@ -113,6 +113,8 @@ $sw-login-error-animation-duration: 0.15s;
 
         svg {
             fill: $color-white;
+            width: 45px;
+            height: 45px;
         }
 
         @media screen and (max-width: 600px) {

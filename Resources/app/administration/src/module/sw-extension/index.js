@@ -185,7 +185,7 @@ Shopware.Module.register('sw-extension', {
         {
             id: 'sw-extension',
             label: 'sw-extension.mainMenu.mainMenuItemExtensionStore',
-            color: '#189EFF',
+            color: '#fff',
             icon: 'regular-plug',
             position: 70,
         },

@@ -32,7 +32,7 @@ Shopware.Module.register('sw-dashboard', {
         {
             id: 'sw-dashboard',
             label: 'sw-dashboard.general.mainMenuItemGeneral',
-            color: '#6AD6F0',
+            color: '#fff',
             icon: 'regular-tachometer',
             path: 'sw.dashboard.index',
             position: 10,

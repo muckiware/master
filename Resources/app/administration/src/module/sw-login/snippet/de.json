@@ -7,7 +7,7 @@
     "index": {
       "headlineMain": "Hallo!",
       "subheadlineMain": "Willkommen zurück.",
-      "headlineForm": "Melde Dich in Deinem Shopware-Shop an",
+      "headlineForm": "Anmelden",
       "labelUsername": "Benutzername",
       "labelPassword": "Passwort",
       "labelKeepLoggedIn": "Angemeldet bleiben",
