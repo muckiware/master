@@ -57,7 +57,7 @@
   },
   "global": {
     "sw-admin-menu": {
-      "textShopwareAdmin": "Shopware Administration"
+      "textShopwareAdmin": "Master Administration"
     },
     "default": {
       "error": "Fehler"

@@ -1,6 +1,6 @@
 # Administration
 
-> Shopware Administration
+> Master Administration
 
 ## Build Setup
 
