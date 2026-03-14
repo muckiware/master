@@ -19,15 +19,59 @@ export default {
     template,
 
     computed: {
-        version() {
+
+        coreVersion() {
+
             let output = '';
-            const version = Shopware.Context.app.config.version;
+            const coreVersion = Shopware.Context.app.config.coreVersion;
 
             // https://regex101.com/r/oRuJjS/1
-            const match = version.match(/(\d+)\.?(\d+)\.?(\d+)?\.?(\d+)?-?([a-z]+)?(\d+(.\d+)*)?/i);
+            const match = coreVersion.match(/(\d+)\.?(\d+)\.?(\d+)?\.?(\d+)?-?([a-z]+)?(\d+(.\d+)*)?/i);
 
             if (match === null) {
-                return version;
+                return coreVersion;
+            }
+
+            // Get rid of whole regex match for example "6.4.99999.9999999-dev"
+            match.shift();
+
+            // Iterate version parts and append to output
+            match.forEach((versionPart, index) => {
+                if (typeof versionPart !== 'string') {
+                    return;
+                }
+
+                const hrt = this.getHumanReadableText(versionPart);
+
+                if (hrt !== versionPart) {
+                    output += ` ${hrt}`;
+
+                    return;
+                }
+
+                // Special case for the first version part. Don't append a dot to the string
+                if (index === 0) {
+                    output += `${hrt}`;
+
+                    return;
+                }
+
+                // Add dot and version part to output
+                output += `.${hrt}`;
+            });
+
+            return output;
+        },
+        masterVersion() {
+
+            let output = '';
+            const masterVersion = Shopware.Context.app.config.masterVersion;
+
+            // https://regex101.com/r/oRuJjS/1
+            const match = masterVersion.match(/(\d+)\.?(\d+)\.?(\d+)?\.?(\d+)?-?([a-z]+)?(\d+(.\d+)*)?/i);
+
+            if (match === null) {
+                return masterVersion;
             }
 
             // Get rid of whole regex match for example "6.4.99999.9999999-dev"
@@ -63,6 +107,7 @@ export default {
     },
 
     methods: {
+
         getHumanReadableText(text) {
             if (text === 'dp') {
                 return 'Developer Preview';

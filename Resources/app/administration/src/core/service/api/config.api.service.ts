@@ -31,7 +31,7 @@ class ConfigApiService extends ApiService {
 
         return new Promise((resolve) => {
             void this.httpClient
-                .get('/_info/config', {
+                .get('/_systeminfo/config', {
                     params,
                     headers,
                 })

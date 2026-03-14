@@ -88,10 +88,7 @@ export default () => {
         'sw-inheritance-warning',
         () => import('src/app/component/structure/sw-inheritance-warning/index'),
     );
-    Shopware.Component.register(
-        'sw-in-app-purchase-checkout',
-        () => import('src/app/component/structure/sw-in-app-purchase-checkout/index'),
-    );
+
     Shopware.Component.register('sw-hidden-iframes', () => import('src/app/component/structure/sw-hidden-iframes/index'));
     Shopware.Component.register('sw-error', () => import('src/app/component/structure/sw-error/index'));
     Shopware.Component.register(
