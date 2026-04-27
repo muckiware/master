@@ -10,8 +10,6 @@ use Muckiware\Master\Events\PreResetExcludedSearchTermEvent;
 use Muckiware\Master\Framework\Routing\AdministrationRouteScope;
 use Muckiware\Master\Framework\Routing\KnownIps\KnownIpsCollectorInterface;
 use Muckiware\Master\Snippet\SnippetFinderInterface;
-use Shopware\Core\Checkout\Customer\CustomerCollection;
-use Shopware\Core\Checkout\Customer\CustomerEntity;
 use Shopware\Core\Defaults;
 use Shopware\Core\Framework\Adapter\Twig\TemplateFinderInterface;
 use Shopware\Core\Framework\Api\OAuth\SymfonyBearerTokenValidator;
@@ -20,9 +18,6 @@ use Shopware\Core\Framework\DataAbstractionLayer\DefinitionInstanceRegistry;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepository;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\Flag\AllowHtml;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
-use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\EqualsFilter;
-use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\MultiFilter;
-use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\NotEqualsFilter;
 use Shopware\Core\Framework\Feature;
 use Shopware\Core\Framework\Log\Package;
 use Shopware\Core\Framework\Routing\RoutingException;
@@ -31,7 +26,6 @@ use Shopware\Core\Framework\Util\HtmlSanitizer;
 use Shopware\Core\Framework\Uuid\Uuid;
 use Shopware\Core\Framework\Validation\Exception\ConstraintViolationException;
 use Shopware\Core\PlatformRequest;
-use Shopware\Core\System\Currency\CurrencyCollection;
 use Shopware\Core\System\Language\LanguageCollection;
 use Shopware\Core\System\Language\LanguageEntity;
 use Shopware\Core\System\SystemConfig\SystemConfigService;
@@ -64,8 +58,6 @@ class AdministrationController extends AbstractController
      * @internal
      *
      * @param array<int, int> $supportedApiVersions
-     * @param EntityRepository<CustomerCollection> $customerRepository
-     * @param EntityRepository<CurrencyCollection> $currencyRepository
      * @param EntityRepository<LanguageCollection> $languageRepository
      */
     public function __construct(
@@ -77,8 +69,6 @@ class AdministrationController extends AbstractController
         private readonly Connection $connection,
         private readonly EventDispatcherInterface $eventDispatcher,
         private readonly string $shopwareCoreDir,
-        private readonly EntityRepository $customerRepository,
-        private readonly EntityRepository $currencyRepository,
         private readonly HtmlSanitizer $htmlSanitizer,
         private readonly DefinitionInstanceRegistry $definitionInstanceRegistry,
         ParameterBagInterface $params,
@@ -106,8 +96,6 @@ class AdministrationController extends AbstractController
     {
         $template = $this->finder->find('@Administration/administration/index.html.twig');
 
-        $defaultCurrency = $this->currencyRepository->search(new Criteria([Defaults::CURRENCY]), $context)->getEntities()->first();
-
         $refreshTokenInterval = new \DateInterval($this->refreshTokenTtl);
         $refreshTokenTtl = $refreshTokenInterval->s + $refreshTokenInterval->i * 60 + $refreshTokenInterval->h * 3600 + $refreshTokenInterval->d * 86400;
 
@@ -115,8 +103,6 @@ class AdministrationController extends AbstractController
             'features' => Feature::getAll(),
             'systemLanguageId' => Defaults::LANGUAGE_SYSTEM,
             'defaultLanguageIds' => [Defaults::LANGUAGE_SYSTEM],
-            'systemCurrencyId' => Defaults::CURRENCY,
-            'systemCurrencyISOCode' => $defaultCurrency?->getIsoCode(),
             'liveVersionId' => Defaults::LIVE_VERSION,
             'firstRunWizard' => $this->firstRunWizardService->frwShouldRun(),
             'apiVersion' => $this->getLatestApiVersion(),
@@ -259,7 +245,7 @@ class AdministrationController extends AbstractController
             }
         }
 
-        $customer = $this->getCustomerByEmail((string) $request->request->get('id'), $email, $context, $boundSalesChannelId);
+        $customer = null;
         if (!$customer) {
             return new JsonResponse(
                 ['isValid' => true]
@@ -351,26 +337,6 @@ class AdministrationController extends AbstractController
         usort($sortedSupportedApiVersions, fn (int $version1, int $version2) => \version_compare((string) $version1, (string) $version2));
 
         return array_pop($sortedSupportedApiVersions);
-    }
-
-    private function getCustomerByEmail(string $customerId, string $email, Context $context, ?string $boundSalesChannelId): ?CustomerEntity
-    {
-        $criteria = new Criteria();
-        $criteria->setLimit(1);
-        if ($boundSalesChannelId) {
-            $criteria->addAssociation('boundSalesChannel');
-        }
-
-        $criteria->addFilter(new EqualsFilter('email', $email));
-        $criteria->addFilter(new EqualsFilter('guest', false));
-        $criteria->addFilter(new NotEqualsFilter('id', $customerId));
-
-        $criteria->addFilter(new MultiFilter(MultiFilter::CONNECTION_OR, [
-            new EqualsFilter('boundSalesChannelId', null),
-            new EqualsFilter('boundSalesChannelId', $boundSalesChannelId),
-        ]));
-
-        return $this->customerRepository->search($criteria, $context)->getEntities()->first();
     }
 
     /**

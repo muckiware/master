@@ -21,7 +21,7 @@
 
         <service id="Muckiware\Master\Controller\AdminExtensionApiController" public="true">
             <argument type="service" id="Shopware\Core\Framework\App\ActionButton\Executor"/>
-            <argument type="service" id="Shopware\Core\Framework\App\Payload\AppPayloadServiceHelper"/>
+            <argument type="service" id="Muckiware\Core\Framework\App\Payload\AppPayloadServiceHelper"/>
             <argument type="service" id="app.repository"/>
             <argument type="service" id="Shopware\Core\Framework\App\Hmac\QuerySigner"/>
 
@@ -40,8 +40,6 @@
             <argument type="service" id="Doctrine\DBAL\Connection"/>
             <argument type="service" id="event_dispatcher"/>
             <argument>%kernel.shopware_core_dir%</argument>
-            <argument type="service" id="customer.repository"/>
-            <argument type="service" id="currency.repository"/>
             <argument type="service" id="Shopware\Core\Framework\Util\HtmlSanitizer"/>
             <argument type="service" id="Shopware\Core\Framework\DataAbstractionLayer\DefinitionInstanceRegistry"/>
             <argument type="service" id="parameter_bag"/>
@@ -88,7 +86,6 @@
                 <argument type="service" id="service_container"/>
             </call>
         </service>
-
         <service id="Muckiware\Master\Controller\NotificationController" public="true">
             <argument type="service" id="shopware.rate_limiter"/>
             <argument type="service" id="Shopware\Core\Framework\Notification\NotificationService"/>
@@ -97,7 +94,6 @@
                 <argument type="service" id="service_container"/>
             </call>
         </service>
-
         <service id="Muckiware\Master\Controller\SystemInfoController" public="true">
             <argument type="service" id="parameter_bag"/>
             <argument type="service" id="kernel" />
@@ -112,6 +108,46 @@
                 <argument type="service" id="service_container"/>
             </call>
         </service>
+
+<!--        <service id="Muckiware\Master\Core\Framework\Demodata\PersonalData\CleanPersonalDataCommandDecorator" decorates="Shopware\Core\Framework\Demodata\PersonalData\CleanPersonalDataCommand" decoration-priority="1">-->
+<!--            <argument type="service" id="Muckiware\Master\Core\Framework\Demodata\PersonalData\CleanPersonalDataCommandDecorator.inner" />-->
+<!--        </service>-->
+<!--        <service id="Muckiware\Master\Core\Checkout\Cart\ApiOrderCartServiceDecorator" decorates="Shopware\Core\Checkout\Cart\ApiOrderCartService" decoration-priority="1">-->
+<!--            <argument type="service" id="Muckiware\Master\Core\Checkout\Cart\ApiOrderCartServiceDecorator.inner" />-->
+<!--        </service>-->
+<!--        <service id="Muckiware\Master\Core\Framework\Api\Controller\SalesChannelProxyControllerDecorator" decorates="Shopware\Core\Framework\Api\Controller\SalesChannelProxyController" decoration-priority="1" public="true">-->
+<!--            <argument type="service" id="Muckiware\Master\Core\Framework\Api\Controller\SalesChannelProxyControllerDecorator.inner" />-->
+<!--            <argument type="service" id="kernel"/>-->
+<!--            <argument type="service" id="sales_channel.repository"/>-->
+<!--            <argument type="service" id="Shopware\Core\Framework\Validation\DataValidator"/>-->
+<!--            <argument type="service" id="Shopware\Core\System\SalesChannel\Context\SalesChannelContextPersister"/>-->
+<!--            <argument type="service" id="Shopware\Core\System\SalesChannel\Context\SalesChannelContextService"/>-->
+<!--            <argument type="service" id="event_dispatcher"/>-->
+<!--            <argument type="service" id="Shopware\Core\Checkout\Cart\ApiOrderCartService"/>-->
+<!--&lt;!&ndash;            <argument type="service" id="Shopware\Core\Checkout\Cart\SalesChannel\CartOrderRoute"/>&ndash;&gt;-->
+<!--            <argument type="service" id="Shopware\Core\Checkout\Cart\SalesChannel\CartService"/>-->
+<!--            <argument type="service" id="request_stack"/>-->
+<!--            <argument type="service" id="Shopware\Core\Checkout\Customer\ImitateCustomerTokenGenerator"/>-->
+<!--            <call method="setContainer">-->
+<!--                <argument type="service" id="service_container"/>-->
+<!--            </call>-->
+<!--        </service>-->
+<!--        <service id="Muckiware\Master\Core\Framework\Adapter\Cache\CacheStateSubscriberDecorator" decorates="Shopware\Core\Framework\Adapter\Cache\CacheStateSubscriber" decoration-priority="1">-->
+<!--            <argument type="service" id="Muckiware\Master\Core\Framework\Adapter\Cache\CacheStateSubscriberDecorator.inner" />-->
+<!--            <tag name="kernel.event_subscriber"/>-->
+<!--        </service>-->
+<!--        <service id="Muckiware\Master\Core\Framework\Adapter\Cache\Http\CacheResponseSubscriberDecorator" decorates="Shopware\Core\Framework\Adapter\Cache\Http\CacheResponseSubscriber" decoration-priority="1">-->
+<!--            <argument type="service" id="Muckiware\Master\Core\Framework\Adapter\Cache\Http\CacheResponseSubscriberDecorator.inner" />-->
+<!--            <argument>%shopware.http.cache.default_ttl%</argument>-->
+<!--            <argument>%shopware.http.cache.enabled%</argument>-->
+<!--            <argument type="service" id="Shopware\Core\Framework\Routing\MaintenanceModeResolver"/>-->
+<!--            <argument>%shopware.http_cache.stale_while_revalidate%</argument>-->
+<!--            <argument>%shopware.http_cache.stale_if_error%</argument>-->
+<!--            <argument type="service" id="Shopware\Core\Framework\Adapter\Cache\Http\CacheHeadersService"/>-->
+<!--            <argument type="service" id="Shopware\Core\Framework\Adapter\Cache\Http\CachePolicyProvider"/>-->
+
+<!--            <tag name="kernel.event_subscriber"/>-->
+<!--        </service>-->
 
         <service id="Muckiware\Master\Service\AdminSearcher">
             <argument type="service" id="Shopware\Core\Framework\DataAbstractionLayer\DefinitionInstanceRegistry"/>
