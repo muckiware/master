@@ -149,9 +149,9 @@
 
                             {% block sw_sales_channel_list_grid_actions_item_open_storefront %}
                             <sw-context-menu-item
-                                v-if="isStorefrontSalesChannel(item)"
+                                v-if="isFrontendSalesChannel(item)"
                                 :disabled="!item.active || !checkForDomainLink(item)"
-                                @click.prevent="openStorefrontLink(item.domainLink)"
+                                @click.prevent="openFrontendLink(item.domainLink)"
                             >
                                 {{ $tc('sw-sales-channel.general.tooltipOpenStorefront') }}
                             </sw-context-menu-item>

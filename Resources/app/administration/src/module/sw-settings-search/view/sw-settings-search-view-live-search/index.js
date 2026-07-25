@@ -36,8 +36,8 @@ export default {
     },
 
     computed: {
-        storefrontEsEnable() {
-            return Shopware.Context.app.storefrontEsEnable ?? false;
+        frontendEsEnable() {
+            return Shopware.Context.app.frontendEsEnable ?? false;
         },
     },
 };

@@ -105,9 +105,9 @@
           "messageSuccess": "Media have been indexed."
         },
         "salesChannel": {
-          "title": "Indexing Sales Channels",
-          "message": "Sales Channel indexed. | One Sales Channel remaining... | {n} Sales Channels remaining...",
-          "messageSuccess": "Sales Channels have been indexed."
+          "title": "Indexing Frontends",
+          "message": "Frontend indexed. | One Frontend remaining... | {n} Frontends remaining...",
+          "messageSuccess": "Frontends have been indexed."
         },
         "rule": {
           "title": "Indexing rules",
@@ -674,7 +674,7 @@
         },
         "placeholder": "Search conditions...",
         "orderCountRule": "Quantity of completed orders",
-        "salesChannelRule": "Sales Channel",
+        "salesChannelRule": "Frontend",
         "currencyRule": "Currency",
         "languageRule": "Language",
         "customerIsActiveRule": "Customer is active",
@@ -1001,8 +1001,8 @@
       "promotion_persona_rule": "Promotion target group | Promotion target groups",
       "rule": "Rule | Rules",
       "rule_condition": "Condition | Conditions",
-      "sales_channel": "Sales Channel | Sales Channels",
-      "sales_channel_type": "Sales Channel type | Sales Channel types",
+      "sales_channel": "Frontend | Frontends",
+      "sales_channel_type": "Frontend type | Frontend types",
       "salutation": "Salutation | Salutations",
       "seo_url": "SEO URL | SEO URLs",
       "shipping_method": "Shipping method | Shipping methods",
@@ -1317,11 +1317,11 @@
     }
   },
   "sw-sales-channel-switch": {
-    "messageModalUnsavedChanges": "There are unsaved changes regarding the current sales channel. Do you want to save them now?",
+    "messageModalUnsavedChanges": "There are unsaved changes regarding the current frontend. Do you want to save them now?",
     "placeholderSelect": "Search for...",
     "titleModalUnsavedChanges": "Unsaved changes",
     "titleModalButtonRevertUnsavedChanges": "Discard changes",
-    "labelDefaultOption": "All Sales Channels"
+    "labelDefaultOption": "All Frontends"
   },
   "sw-config-form-renderer": {
     "placeholder": "Please fill in {name}...",
@@ -1406,7 +1406,7 @@
     "keyboardShortcutAddManufacturer": "A M",
     "functionAddRule": "Add rule",
     "keyboardShortcutAddRule": "A R",
-    "functionAddSaleschannel": "Add Sales Channel",
+    "functionAddSaleschannel": "Add Frontend",
     "keyboardShortcutAddSaleschannel": "A S",
     "functionGoToDashboard": "Go to dashboard",
     "keyboardShortcutGoToDashboard": "G H",
@@ -1529,8 +1529,8 @@
             "label": "Installation path"
           },
           "sales_channel_domain_urls": {
-            "label": "Sales channel domains",
-            "description": "The checksum of the sales channel domains changes when existing domains are modified or deleted or new domains are added."
+            "label": "Frontend domains",
+            "description": "The checksum of the frontend domains changes when existing domains are modified or deleted or new domains are added."
           }
         },
         "strategies": {

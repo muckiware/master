@@ -124,7 +124,7 @@ export default {
             this.liveSearchResults = this.searchResults;
         },
 
-        searchOnStorefront() {
+        searchOnFrontend() {
             if (!this.liveSearchTerm.length) {
                 return;
             }

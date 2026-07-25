@@ -149,15 +149,15 @@ export default {
             return true;
         },
 
-        openStorefrontLink(storeFrontLink) {
-            window.open(storeFrontLink, '_blank');
+        openFrontendLink(frontendLink) {
+            window.open(frontendLink, '_blank');
         },
 
         isFavorite(salesChannelId) {
             return this.salesChannelFavoritesService.isFavorite(salesChannelId);
         },
 
-        isStorefrontSalesChannel(salesChannel) {
+        isFrontendSalesChannel(salesChannel) {
             return salesChannel.type.id === Defaults.storefrontSalesChannelTypeId;
         },
     },

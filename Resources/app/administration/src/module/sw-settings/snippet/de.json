@@ -17,7 +17,7 @@
       "textSettingRenameBanner": "Die Einstellung <b>Maßeinheiten</b> wurde in <b>Produkteinheiten</b> umbenannt."
     },
     "system-config": {
-      "labelSalesChannelSelect": "Verkaufskanal",
+      "labelSalesChannelSelect": "Frontend",
       "inherited": "Vererbt",
       "compileNotice": "Diese Konfiguration enthält Felder, die für das Theme verwendet werden. Damit die Änderungen sichtbar werden, muss das Theme neu kompiliert werden.",
       "scssHelpText": "SCSS-Variablenname: "

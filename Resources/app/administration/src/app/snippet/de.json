@@ -105,9 +105,9 @@
           "messageSuccess": "Medien indexiert."
         },
         "salesChannel": {
-          "title": "Verkaufskanal-Indexierung",
-          "message": "Verkaufskanal indexiert. | Noch ein Verkaufskanal verbleibend ... | Circa {n} Verkaufskanäle verbleibend ...",
-          "messageSuccess": "Verkaufskanäle indexiert."
+          "title": "Frontend-Indexierung",
+          "message": "Frontend indexiert. | Noch ein Frontend verbleibend ... | Circa {n} Frontends verbleibend ...",
+          "messageSuccess": "Frontends indexiert."
         },
         "rule": {
           "title": "Regel-Indexierung",
@@ -674,7 +674,7 @@
         },
         "placeholder": "Bedingungen durchsuchen ...",
         "orderCountRule": "Anzahl abgeschlossener Bestellungen",
-        "salesChannelRule": "Verkaufskanal",
+        "salesChannelRule": "Frontend",
         "currencyRule": "Währung",
         "languageRule": "Sprache",
         "customerIsActiveRule": "Kunde ist aktiv",
@@ -1001,8 +1001,8 @@
       "promotion_persona_rule": "Promotion-Zielgruppe | Promotion-Zielgruppen",
       "rule": "Regel | Regeln",
       "rule_condition": "Bedingung | Bedingungen",
-      "sales_channel": "Verkaufskanal | Verkaufskanäle",
-      "sales_channel_type": "Verkaufskanaltyp | Verkaufskanaltypen",
+      "sales_channel": "Frontend | Frontends",
+      "sales_channel_type": "Frontend-Typ | Frontend-Typen",
       "salutation": "Anrede | Anreden",
       "seo_url": "SEO-URL | SEO-URLs",
       "shipping_method": "Versandart | Versandarten",
@@ -1317,11 +1317,11 @@
     }
   },
   "sw-sales-channel-switch": {
-    "messageModalUnsavedChanges": "Du hast noch ungespeicherte Änderungen in diesem Verkaufskanal. Möchtest Du diese jetzt speichern?",
+    "messageModalUnsavedChanges": "Du hast noch ungespeicherte Änderungen in diesem Frontend. Möchtest Du diese jetzt speichern?",
     "placeholderSelect": "Suchen ...",
     "titleModalUnsavedChanges": "Nicht gespeicherte Änderungen",
     "titleModalButtonRevertUnsavedChanges": "Änderungen verwerfen",
-    "labelDefaultOption": "Alle Verkaufskanäle"
+    "labelDefaultOption": "Alle Frontends"
   },
   "sw-config-form-renderer": {
     "placeholder": "Bitte \"{name}\" ausfüllen ...",
@@ -1406,7 +1406,7 @@
     "keyboardShortcutAddManufacturer": "A M",
     "functionAddRule": "Regel hinzufügen",
     "keyboardShortcutAddRule": "A R",
-    "functionAddSaleschannel": "Verkaufskanal hinzufügen",
+    "functionAddSaleschannel": "Frontend hinzufügen",
     "keyboardShortcutAddSaleschannel": "A S",
     "functionGoToDashboard": "Gehe zu Dashboard",
     "keyboardShortcutGoToDashboard": "G H",
@@ -1529,8 +1529,8 @@
             "label": "Installationspfad"
           },
           "sales_channel_domain_urls": {
-            "label": "Verkaufskanal-Domains",
-            "description": "Die Prüfsumme der Verkaufskanal-Domains ändert sich, wenn bestehende Domains geändert oder gelöscht werden oder neue Domains hinzugefügt werden."
+            "label": "Frontend-Domains",
+            "description": "Die Prüfsumme der Frontend-Domains ändert sich, wenn bestehende Domains geändert oder gelöscht werden oder neue Domains hinzugefügt werden."
           }
         },
         "strategies": {

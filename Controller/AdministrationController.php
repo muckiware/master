@@ -50,7 +50,7 @@ class AdministrationController extends AbstractController
 
     private readonly bool $esAdministrationEnabled;
 
-    private readonly bool $esStorefrontEnabled;
+    private readonly bool $esFrontendEnabled;
 
     private readonly bool $productStreamIndexingEnabled;
 
@@ -83,7 +83,7 @@ class AdministrationController extends AbstractController
         $this->esAdministrationEnabled = $params->has('elasticsearch.administration.enabled')
             ? $params->get('elasticsearch.administration.enabled')
             : false;
-        $this->esStorefrontEnabled = $params->has('elasticsearch.enabled')
+        $this->esFrontendEnabled = $params->has('elasticsearch.enabled')
             ? $params->get('elasticsearch.enabled')
             : false;
         $this->productStreamIndexingEnabled = $params->has('shopware.product_stream.indexing')
@@ -108,7 +108,7 @@ class AdministrationController extends AbstractController
             'apiVersion' => $this->getLatestApiVersion(),
             'cspNonce' => $request->attributes->get(PlatformRequest::ATTRIBUTE_CSP_NONCE),
             'adminEsEnable' => $this->esAdministrationEnabled,
-            'storefrontEsEnable' => $this->esStorefrontEnabled,
+            'frontendEsEnable' => $this->esFrontendEnabled,
             'refreshTokenTtl' => $refreshTokenTtl * 1000,
             'serviceRegistryUrl' => $this->serviceRegistryUrl,
             'productStreamIndexingEnabled' => $this->productStreamIndexingEnabled,

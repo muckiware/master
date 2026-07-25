@@ -76,7 +76,7 @@ export default {
             return this.productComparison.newProductExport;
         },
 
-        isStorefront() {
+        isFrontend() {
             if (!this.salesChannel) {
                 return this.$route.params.typeId === Defaults.storefrontSalesChannelTypeId;
             }
@@ -116,7 +116,7 @@ export default {
             return this.repositoryFactory.create('product_export');
         },
 
-        storefrontSalesChannelCriteria() {
+        frontendSalesChannelCriteria() {
             const criteria = new Criteria(1, 25);
 
             return criteria.addFilter(Criteria.equals('typeId', Defaults.storefrontSalesChannelTypeId));

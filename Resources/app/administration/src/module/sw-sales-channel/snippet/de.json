@@ -6,18 +6,18 @@
   },
   "sw-sales-channel": {
     "general": {
-      "titleMenuItems": "Verkaufskanäle",
-      "tooltipOpenStorefront": "Öffne Storefront",
+      "titleMenuItems": "Frontends",
+      "tooltipOpenStorefront": "Öffne Frontend",
       "titleMenuMoreItems": "Mehr",
-      "manageSalesChannels": "Verkaufskanäle verwalten",
-      "addSalesChannel": "Verkaufskanal hinzufügen"
+      "manageSalesChannels": "Frontends verwalten",
+      "addSalesChannel": "Frontend hinzufügen"
     },
     "list": {
-      "title": "Verkaufskanäle",
-      "subTitle": "Über Verkaufskanäle können Sie Ihren Kunden Produkte über Social Media, der Storefront, Marktplätze oder persönlich verkaufen.",
-      "placeholderSearchBar": "Durchsuche alle Verkaufskanäle ...",
-      "buttonAddSalesChannel": "Verkaufskanal anlegen",
-      "columnName": "Verkaufskanal",
+      "title": "Frontends",
+      "subTitle": "Über Frontends können Sie den Zugang zu Ihren Diensten über verschiedene Kanäle bereitstellen.",
+      "placeholderSearchBar": "Durchsuche alle Frontends ...",
+      "buttonAddSalesChannel": "Frontend anlegen",
+      "columnName": "Frontend",
       "columnType": "Typ",
       "columnStatus": "Status",
       "columnCreatedAt": "Erstellt am",
@@ -32,8 +32,8 @@
       "productsCount": "Produkte | Produkt | Produkte"
     },
     "modal": {
-      "title": "Verkaufskanal anlegen",
-      "buttonAddChannel": "Verkaufskanal anlegen",
+      "title": "Frontend anlegen",
+      "buttonAddChannel": "Frontend anlegen",
       "titleDetailPrefix": "{name} - Details",
       "buttonShowDetails": "Details",
       "buttonBack": "Zurück",
@@ -41,11 +41,11 @@
       "messageNoProductStreams": "Um Produktvergleiche anzulegen, musst Du zunächst eine dynamische Produktgruppe erstellen."
     },
     "detail": {
-      "messageSaveSuccess": "Der Verkaufskanal \"{name}\" wurde erfolgreich gespeichert.",
-      "messageSaveError": "Der Verkaufskanal \"{name}\" konnte nicht gespeichert werden. Bitte überprüfe Deine Eingaben.",
-      "messageActivateWithoutThemeError": "Der Verkaufskanal \"{name}\" kann noch nicht aktiviert werden. Aktive Verkaufskanäle müssen ein Theme zugeordnet haben.",
+      "messageSaveSuccess": "Das Frontend \"{name}\" wurde erfolgreich gespeichert.",
+      "messageSaveError": "Das Frontend \"{name}\" konnte nicht gespeichert werden. Bitte überprüfe Deine Eingaben.",
+      "messageActivateWithoutThemeError": "Das Frontend \"{name}\" kann noch nicht aktiviert werden. Aktive Frontends müssen ein Theme zugeordnet haben.",
       "messageMeasurementUnitsSetError": "Die Systemkonfiguration für Produktmaße konnte nicht geladen werden.",
-      "activateDisable": "Der Verkaufskanal muss gespeichert und anschließend muss ein Theme zugeordnet werden, bevor er aktiviert werden kann.",
+      "activateDisable": "Das Frontend muss gespeichert und anschließend muss ein Theme zugeordnet werden, bevor es aktiviert werden kann.",
       "buttonSave": "Speichern",
       "buttonCreateNewApiKeys": "API-Zugangsdaten neu generieren",
       "tabBase": "Allgemein",
@@ -86,17 +86,17 @@
       "tooltipDisabledPaymentMethod": "Diese Zahlungsart muss aktiviert werden, damit sie als Standard-Zahlungsart wählbar ist.",
       "tooltipDisabledCountry": "Dieses Land muss aktiviert werden, damit es als Standard-Land wählbar ist.",
       "warningDisabledCountries": "Das Land <b>{name}</b> ist nicht aktiv. | Die Länder <b>{name}</b> und <b>{addition}</b> sind nicht aktiv.",
-      "warningDisabledPaymentMethod": "Einige der Zahlungsarten, die diesem Verkaufskanal zugeordnet sind, sind derzeit nicht verfügbar. Bitte überprüfen Sie Ihre <a href=\"{paymentSettingsLink}\">Einstellungen</a> für diese Zahlungsarten:<br /><b>{separatedList}</b>",
+      "warningDisabledPaymentMethod": "Einige der Zahlungsarten, die diesem Frontend zugeordnet sind, sind derzeit nicht verfügbar. Bitte überprüfen Sie Ihre <a href=\"{paymentSettingsLink}\">Einstellungen</a> für diese Zahlungsarten:<br /><b>{separatedList}</b>",
       "warningDisabledShippingMethod": "Die Versandart <b>{name}</b> ist nicht aktiv. | Die Versandarten <b>{name}</b> und <b>{addition}</b> sind nicht aktiv.",
       "warningDisabledAddition": "{amount} weitere",
-      "warningUnservedLanguage": "Die Sprache <b>{list}</b> ist keiner Domain zugewiesen. Um die Sprache in Deinem Verkaufskanal nutzen zu können, musst Du zunächst eine entsprechende Domain anlegen. | Die Sprachen <b>{list}</b> sind keiner Domain zugewiesen. Um diese Sprachen in Deinem Verkaufskanal nutzen zu können, musst Du zunächst die entsprechenden Domains anlegen.",
-      "textDeleteInfo": "Achtung: Hiermit löschst Du diesen Verkaufskanal vollständig! Der Verkaufskanal wird danach nicht mehr in der Master Administration verfügbar sein und kann auch nicht wiederhergestellt werden. Alle vorhandenen Bestellungen bleiben jedoch erhalten. Auch ausgespielte Kataloge werden durch diese Aktion nicht verändert.",
-      "buttonDelete": "Verkaufskanal löschen",
-      "deleteModalTitle": "Verkaufskanal löschen",
-      "textConfirmDelete": "Möchtest Du diesen Verkaufskanal wirklich löschen?",
+      "warningUnservedLanguage": "Die Sprache <b>{list}</b> ist keiner Domain zugewiesen. Um die Sprache in Deinem Frontend nutzen zu können, musst Du zunächst eine entsprechende Domain anlegen. | Die Sprachen <b>{list}</b> sind keiner Domain zugewiesen. Um diese Sprachen in Deinem Frontend nutzen zu können, musst Du zunächst die entsprechenden Domains anlegen.",
+      "textDeleteInfo": "Achtung: Hiermit löschst Du dieses Frontend vollständig! Das Frontend wird danach nicht mehr in der Master Administration verfügbar sein und kann auch nicht wiederhergestellt werden. Alle vorhandenen Bestellungen bleiben jedoch erhalten. Auch ausgespielte Kataloge werden durch diese Aktion nicht verändert.",
+      "buttonDelete": "Frontend löschen",
+      "deleteModalTitle": "Frontend löschen",
+      "textConfirmDelete": "Möchtest Du dieses Frontend wirklich löschen?",
       "buttonConfirmDelete": "Löschen",
-      "textHeadline": "Neuer Verkaufskanal",
-      "placeholderName": "Gib einen Namen für den Verkaufskanal ein ...",
+      "textHeadline": "Neues Frontend",
+      "placeholderName": "Gib einen Namen für das Frontend ein ...",
       "placeholderInputCategories": "Kategorien hinzufügen ...",
       "titleDomains": "Domains",
       "titleDomainItem": "URL {index}",
@@ -105,13 +105,13 @@
       "labelInputSnippet": "Textbaustein-Set",
       "buttonDeleteDomain": "Domain löschen",
       "messageDeleteDomainError": "Die Domain \"{url}\" konnte nicht gelöscht werden, da sie mit bestehenden Produktexporten verknüpft ist.",
-      "foreignKeyDelete": "Dieser Verkaufskanal kann nicht gelöscht werden, da er noch von {assignment} verwendet wird.",
+      "foreignKeyDelete": "Dieses Frontend kann nicht gelöscht werden, da es noch von {assignment} verwendet wird.",
       "buttonAddDomain": "Domain hinzufügen",
       "deleteDomainModalTitle": "Domain löschen",
-      "textConfirmDeleteDomain": "Möchtest Du diese Domain wirklich löschen? Der Verkaufskanal ist dann nicht mehr über \"{url}\" zugänglich",
+      "textConfirmDeleteDomain": "Möchtest Du diese Domain wirklich löschen? Das Frontend ist dann nicht mehr über \"{url}\" zugänglich",
       "buttonConfirmDeleteDomain": "Löschen",
       "customerGroup": "Kundengruppe",
-      "favouriteLabel": "Verkaufskanal als Favorit markieren",
+      "favouriteLabel": "Frontend als Favorit markieren",
       "navigation": "Navigation",
       "navigationCategoryId": "Einstiegspunkt für die Haupt-Navigation",
       "navigationCategoryDepth": "Hauptnavigations-Ebenen",
@@ -119,12 +119,12 @@
       "footerCategory": "Einstiegspunkt für die Footer-Navigation",
       "serviceCategory": "Einstiegspunkt für die Footer-Service-Navigation",
       "titleOptionsApiKey": "API-Zugang",
-      "textDeleteSalesChannelWarning": "Das Entfernen dieses Verkaufskanals kann nicht wieder rückgängig gemacht werden.",
+      "textDeleteSalesChannelWarning": "Das Entfernen dieses Frontends kann nicht wieder rückgängig gemacht werden.",
       "buttonCopyApiKeyButton": "API-Schlüssel kopieren",
       "titleStatus": "Status",
       "titleGeneralInformation": "Allgemeine Informationen",
       "titleAccount": "Konto",
-      "titleDeleteSalesChannel": "Verkaufskanal löschen",
+      "titleDeleteSalesChannel": "Frontend löschen",
       "titleProductSync": "Produkt-Synchronisierung",
       "titleSyncedProducts": "Synchronisierte Produkte",
       "titleCategoryMapping": "Kategoriezuordnung",
@@ -133,14 +133,14 @@
       "buttonEditDomain": "Domain bearbeiten",
       "titleCreateDomain": "Neue Domain erstellen",
       "titleEditDomain": "Domain \"{name}\" bearbeiten",
-      "textDomainDescription": "Jede ausgewählte Sprache benötigt eine eigene Domain im jeweiligen Verkaufskanal. Du kannst darüberhinaus auch noch weitere eigene Domains für den Verkaufskanal hinzufügen.",
+      "textDomainDescription": "Jede ausgewählte Sprache benötigt eine eigene Domain im jeweiligen Frontend. Du kannst darüberhinaus auch noch weitere eigene Domains für das Frontend hinzufügen.",
       "textApiAccessDescription": "Um API-Zugriff zu erhalten benötigst Du die unten angezeigte API-Zugangs-ID. Eine Neugenerierung überschreibt die alte API-Zugangs-ID und terminiert alle existierenden Zugriffsrouten. <strong>Diese Aktion kann nicht rückgängig gemacht werden.</strong>",
-      "textActiveDescription": "Das Deaktivieren des Verkaufskanals macht ihn für Besucher und API-Verbindungen unzugänglich.",
+      "textActiveDescription": "Das Deaktivieren des Frontends macht es für Besucher und API-Verbindungen unzugänglich.",
       "columnDomainUrl": "URL",
       "columnDomainLanguage": "Sprache",
       "columnDomainSnippetSet": "Textbaustein-Set",
       "maintenanceModeTitle": "Wartungsmodus",
-      "maintenanceModeDescription": "Im Wartungsmodus ist der Verkaufskanal für Besucher unsichtbar. IPs die auf der Whitelist stehen, können jedoch weiterhin auf den Verkaufskanal zugreifen. Auf diese Weise kann sicher mit den Daten des Verkaufskanals gearbeitet werden, während Kunden und Besucher einen Wartungsmodus-Bildschirm angezeigt bekommen.",
+      "maintenanceModeDescription": "Im Wartungsmodus ist das Frontend für Besucher unsichtbar. IPs die auf der Whitelist stehen, können jedoch weiterhin auf das Frontend zugreifen. Auf diese Weise kann sicher mit den Daten des Frontends gearbeitet werden, während Kunden und Besucher einen Wartungsmodus-Bildschirm angezeigt bekommen.",
       "labelMaintenanceActive": "Wartungsmodus",
       "ipAddressAllowlistHelpText": "Füge der Allowlist IP-Adressen hinzu, um einen selektiven Zugriff auf den Shop zu ermöglichen. Du kannst bei Bedarf IPv4- und IPv6-Adressen hinzufügen.",
       "basicinformationLink": "Standard-Wartungsseiten-Layout ändern",
@@ -154,7 +154,7 @@
         "columnProductName": "Produktname",
         "columnActive": "Aktiv",
         "columnProductNumber": "Produktnummer",
-        "inheritVariantNotRemovableTooltip": "Diese Variante erbt die Verkaufskanal-Zuweisung von ihrem Hauptprodukt."
+        "inheritVariantNotRemovableTooltip": "Diese Variante erbt die Frontend-Zuweisung von ihrem Hauptprodukt."
       },
       "productComparison": {
         "inputHeaderLabel": "Kopfzeile",
@@ -203,18 +203,18 @@
           "518400": "6 Tage",
           "604800": "1 Woche"
         },
-        "storefront": "Storefront-Verkaufskanal",
-        "storefrontDomain": "Storefront-Domain",
+        "storefront": "Frontend",
+        "storefrontDomain": "Frontend-Domain",
         "storefrontDomainLanguage": {
           "label": "Sprache",
-          "help": "Auf Basis der Storefront-Domain automatisch gewählt"
+          "help": "Auf Basis der Frontend-Domain automatisch gewählt"
         },
         "storefrontDomainCurrency": {
           "label": "Währung"
         },
         "storefrontSalesChannelCustomerGroup": {
           "label": "Kundengruppe",
-          "help": "Auf Basis des Storefront-Verkaufskanals automatisch gewählt"
+          "help": "Auf Basis des Frontends automatisch gewählt"
         },
         "messageAccessKeyChanged": "Der Zugangsschlüssel und die geänderte Export-URL werden erst nach dem Speichern aktiv.",
         "templates": {
@@ -226,10 +226,10 @@
             "google-product-search-de": "Google Shopping (XML)"
           },
           "modal-title": "Template anwenden",
-          "modal-message": "Bei Übernahme der Daten aus dem Template werden vorhandene Daten in diesem Verkaufskanal überschrieben. Es werden sowohl Einstellungen, als auch das Template angepasst.",
+          "modal-message": "Bei Übernahme der Daten aus dem Template werden vorhandene Daten in diesem Frontend überschrieben. Es werden sowohl Einstellungen, als auch das Template angepasst.",
           "modal-confirm": "Template übernehmen",
           "message": {
-            "template-applied-message": "Die Daten aus dem Template wurden übernommen. Bitte speichere den Verkaufskanal, um die Änderungen dauerhaft zu übernehmen."
+            "template-applied-message": "Die Daten aus dem Template wurden übernommen. Bitte speichere das Frontend, um die Änderungen dauerhaft zu übernehmen."
           }
         },
         "cliCommand": "CLI-Befehl zur Erstellung des Produktexports"
@@ -256,7 +256,7 @@
           "trackingId": {
             "label": "Tracking-ID",
             "placeHolder": "Tracking-ID eingeben ...",
-            "helpText": "Nach der Anmeldung in Deinem Google-Analytics-Konto erhältst Du eine Tracking-ID. Tracking-IDs können wie folgt aussehen `G-XXXXXXXXXX`. Beginnt die ID mit `GTM-`, wird in der Storefront automatisch das Google Tag Manager-Skript eingebunden: `https://www.googletagmanager.com/gtm.js?id=...`. Andernfalls wird `https://www.googletagmanager.com/gtag/js?id=...` verwendet."
+            "helpText": "Nach der Anmeldung in Deinem Google-Analytics-Konto erhältst Du eine Tracking-ID. Tracking-IDs können wie folgt aussehen `G-XXXXXXXXXX`. Beginnt die ID mit `GTM-`, wird im Frontend automatisch das Google Tag Manager-Skript eingebunden: `https://www.googletagmanager.com/gtm.js?id=...`. Andernfalls wird `https://www.googletagmanager.com/gtag/js?id=...` verwendet."
           },
           "active": {
             "label": "Google Analytics aktivieren"
@@ -312,7 +312,7 @@
   "sw-privileges": {
     "permissions": {
       "sales_channel": {
-        "label": "Verkaufskanäle"
+        "label": "Frontends"
       }
     }
   }

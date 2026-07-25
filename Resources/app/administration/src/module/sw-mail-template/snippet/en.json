@@ -4,7 +4,7 @@
       "mainMenuItemList": "Overview",
       "mainMenuItemGeneral": "Email templates",
       "placeholderSearchBar": "Search email templates...",
-      "notificationTestMailSalesChannelErrorMessage": "Please choose a Sales Channel",
+      "notificationTestMailSalesChannelErrorMessage": "Please choose a Frontend",
       "notificationTestMailErrorMessage": "An error occurred while sending the test email.",
       "notificationTestMailSuccessMessage": "The test email has been sent.",
       "notificationSyntaxValidationErrorMessage": "Invalid template, check syntax: {errorMsg}",
@@ -18,7 +18,7 @@
       "buttonAddMailTemplate": "Add email template",
       "columnMailType": "Type",
       "columnDescription": "Description",
-      "columnSalesChannels": "Sales Channels",
+      "columnSalesChannels": "Frontends",
       "contextMenuDelete": "Delete",
       "contextMenuEdit": "Edit",
       "contextMenuDuplicate": "Duplicate",
@@ -35,10 +35,10 @@
         "titleCard": "Information",
         "labelMailType": "Type",
         "labelDescription": "Description",
-        "labelSalesChannels": "Sales Channel",
+        "labelSalesChannels": "Frontend",
         "placeholderMailType": "Select a type...",
         "placeholderDescription": "Enter email template description...",
-        "placeholderSalesChannels": "Select Sales Channels..."
+        "placeholderSalesChannels": "Select Frontends..."
       },
       "options": {
         "titleCard": "Options",
@@ -69,7 +69,7 @@
         "titleShowPreview": "Show preview",
         "titleShowAvailableVariables": "Variables",
         "copyTooltip": "Copy to clipboard.",
-        "languageNotAssignedToSalesChannel": "The current language is not assigned to the selected sales channel."
+        "languageNotAssignedToSalesChannel": "The current language is not assigned to the selected frontend."
       },
       "previewModalTitle": "Preview",
       "buttonSave": "Save",
@@ -92,14 +92,14 @@
       "buttonAddMailHeaderFooter": "Add header and footer",
       "columnName": "Name",
       "columnDescription": "Description",
-      "columnSalesChannels": "Sales Channels",
+      "columnSalesChannels": "Frontends",
       "contextMenuDelete": "Delete",
       "contextMenuEdit": "Edit",
       "contextMenuDuplicate": "Duplicate",
       "textDeleteConfirm": "Are you sure you want to delete the header and footer \"{name}\"?",
       "buttonDelete": "Delete",
       "titleSidebarItemRefresh": "Refresh",
-      "messageDeleteError": "The header and footer \"{name}\" cannot be deleted, while Sales Channels are configured.",
+      "messageDeleteError": "The header and footer \"{name}\" cannot be deleted, while Frontends are configured.",
       "emptyStateTitle": "No email header and footer yet",
       "emptyStateSubTitle": "Add email header and footer by clicking the \"add\" button."
     },
@@ -108,10 +108,10 @@
         "titleCard": "Information",
         "labelName": "Name",
         "labelDescription": "Description",
-        "labelSalesChannels": "Sales Channels",
+        "labelSalesChannels": "Frontends",
         "placeholderName": "Enter a name...",
         "placeholderDescription": "Enter a description...",
-        "placeholderSalesChannels": "Choose related Sales Channels..."
+        "placeholderSalesChannels": "Choose related Frontends..."
       },
       "header": {
         "titleCard": "Mail header",
@@ -135,8 +135,8 @@
     },
     "modal": {
       "title": "Multiple assignments",
-      "mainContent": "There is already a header and footer template assigned to the following Sales Channels. If you go on and save, that assignment will be overwritten with your changes.",
-      "affectedList": "The following Sales Channels are affected:"
+      "mainContent": "There is already a header and footer template assigned to the following Frontends. If you go on and save, that assignment will be overwritten with your changes.",
+      "affectedList": "The following Frontends are affected:"
     }
   },
   "sw-privileges": {

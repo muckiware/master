@@ -6,18 +6,18 @@
   },
   "sw-sales-channel": {
     "general": {
-      "tooltipOpenStorefront": "Open storefront",
-      "titleMenuItems": "Sales Channels",
+      "tooltipOpenStorefront": "Open frontend",
+      "titleMenuItems": "Frontends",
       "titleMenuMoreItems": "More",
-      "manageSalesChannels": "Manage Sales Channels",
-      "addSalesChannel": "Add Sales Channel"
+      "manageSalesChannels": "Manage Frontends",
+      "addSalesChannel": "Add Frontend"
     },
     "list": {
-      "title": "Sales Channels",
-      "subTitle": "Sales Channels let you sell items to your customers through social media, storefronts, marketplaces or in person.",
-      "placeholderSearchBar": "Search Sales Channels...",
-      "buttonAddSalesChannel": "Add Sales Channel",
-      "columnName": "Sales Channel",
+      "title": "Frontends",
+      "subTitle": "Frontends let you provide access to your services through different channels.",
+      "placeholderSearchBar": "Search Frontends...",
+      "buttonAddSalesChannel": "Add Frontend",
+      "columnName": "Frontend",
       "columnType": "Type",
       "columnStatus": "Status",
       "columnCreatedAt": "Created at",
@@ -32,8 +32,8 @@
       "productsCount": "products | product | products"
     },
     "modal": {
-      "title": "Add Sales Channel",
-      "buttonAddChannel": "Add Sales Channel",
+      "title": "Add Frontend",
+      "buttonAddChannel": "Add Frontend",
       "titleDetailPrefix": "{name} - details",
       "buttonShowDetails": "Show details",
       "buttonBack": "Back",
@@ -41,11 +41,11 @@
       "messageNoProductStreams": "In order to use product comparisons a dynamic product group has to be created first."
     },
     "detail": {
-      "messageSaveSuccess": "Sales Channel \"{name}\" saved.",
-      "messageSaveError": "The Sales Channel \"{name}\" could not be saved. Please check your entries.",
-      "messageActivateWithoutThemeError": "Sales Channel \"{name}\" could not be activated. Active Sales Channels need to have a theme associated.",
+      "messageSaveSuccess": "Frontend \"{name}\" saved.",
+      "messageSaveError": "The Frontend \"{name}\" could not be saved. Please check your entries.",
+      "messageActivateWithoutThemeError": "Frontend \"{name}\" could not be activated. Active Frontends need to have a theme associated.",
       "messageMeasurementUnitsSetError": "Could not load system configuration for product measurements.",
-      "activateDisable": "Please assign a theme before activating and saving the Sales Channel.",
+      "activateDisable": "Please assign a theme before activating and saving the Frontend.",
       "buttonSave": "Save",
       "buttonCreateNewApiKeys": "Create new API key",
       "tabBase": "General",
@@ -86,17 +86,17 @@
       "tooltipDisabledPaymentMethod": "This payment method must be activated in order to be selected as the default payment method.",
       "tooltipDisabledCountry": "This country must be activated in order to be selected as the default country.",
       "warningDisabledCountries": "The country <b>{name}</b> is not active. | The countries <b>{name}</b> and <b>{addition}</b> are not active.",
-      "warningDisabledPaymentMethod": "Some of the payment methods assigned to this Sales Channel are currently not available. Please check your <a href=\"{paymentSettingsLink}\">settings</a> for these payment methods:<br/> <b>{separatedList}</b>",
+      "warningDisabledPaymentMethod": "Some of the payment methods assigned to this Frontend are currently not available. Please check your <a href=\"{paymentSettingsLink}\">settings</a> for these payment methods:<br/> <b>{separatedList}</b>",
       "warningDisabledShippingMethod": "The shipping method <b>{name}</b> is not active. | The shipping methods <b>{name}</b> and <b>{addition}</b> are not active.",
       "warningDisabledAddition": "{amount} others",
-      "warningUnservedLanguage": "The language <b>{list}</b> is not assigned to a domain. In order to use this language in your Sales Channel, create a respective domain first. | The languages <b>{list}</b> are not assigned to any domain. In order to use these languages in your Sales Channel, create the respective domains first.",
-      "textDeleteInfo": "Careful, you are about to delete this Sales Channel permanently! If you proceed, the Sales Channel and all its settings will no longer be available. However, deleting the Sales Channel will not affect existing orders and categories.",
-      "buttonDelete": "Delete Sales Channel",
-      "deleteModalTitle": "Delete Sales Channel",
-      "textConfirmDelete": "Are you sure you want to delete this Sales Channel?",
+      "warningUnservedLanguage": "The language <b>{list}</b> is not assigned to a domain. In order to use this language in your Frontend, create a respective domain first. | The languages <b>{list}</b> are not assigned to any domain. In order to use these languages in your Frontend, create the respective domains first.",
+      "textDeleteInfo": "Careful, you are about to delete this Frontend permanently! If you proceed, the Frontend and all its settings will no longer be available. However, deleting the Frontend will not affect existing orders and categories.",
+      "buttonDelete": "Delete Frontend",
+      "deleteModalTitle": "Delete Frontend",
+      "textConfirmDelete": "Are you sure you want to delete this Frontend?",
       "buttonConfirmDelete": "Delete",
-      "textHeadline": "New Sales Channel",
-      "placeholderName": "Enter Sales Channel name...",
+      "textHeadline": "New Frontend",
+      "placeholderName": "Enter Frontend name...",
       "placeholderInputCategories": "Add categories...",
       "titleDomains": "Domains",
       "titleDomainItem": "URL {index}",
@@ -105,13 +105,13 @@
       "labelInputSnippet": "Snippet",
       "buttonDeleteDomain": "Delete domain",
       "messageDeleteDomainError": "The domain \"{url}\" could not be deleted because it is linked to existing product exports.",
-      "foreignKeyDelete": "This sales channel cannot be deleted because it is still in use by {assignment}.",
+      "foreignKeyDelete": "This frontend cannot be deleted because it is still in use by {assignment}.",
       "buttonAddDomain": "Add domain",
       "deleteDomainModalTitle": "Delete domain",
-      "textConfirmDeleteDomain": "Are you sure you want to delete this domain? The Sales Channel will no longer be accessible by \"{url}\"",
+      "textConfirmDeleteDomain": "Are you sure you want to delete this domain? The Frontend will no longer be accessible by \"{url}\"",
       "buttonConfirmDeleteDomain": "Delete",
       "customerGroup": "Customer group",
-      "favouriteLabel": "Mark Sales Channel as favourite",
+      "favouriteLabel": "Mark Frontend as favourite",
       "navigation": "Navigation",
       "navigationCategoryId": "Entry point main navigation",
       "navigationCategoryDepth": "Navigation levels",
@@ -119,12 +119,12 @@
       "footerCategory": "Entry point footer navigation",
       "serviceCategory": "Entry point footer service navigation",
       "titleOptionsApiKey": "API access",
-      "textDeleteSalesChannelWarning": "Removing this Sales Channel will be permanent.",
+      "textDeleteSalesChannelWarning": "Removing this Frontend will be permanent.",
       "buttonCopyApiKeyButton": "Copy API key",
       "titleStatus": "Status",
       "titleGeneralInformation": "General information",
       "titleAccount": "Account",
-      "titleDeleteSalesChannel": "Delete Sales Channel",
+      "titleDeleteSalesChannel": "Delete Frontend",
       "titleProductSync": "Product sync",
       "titleSyncedProducts": "Synced products",
       "titleCategoryMapping": "Category mapping",
@@ -133,14 +133,14 @@
       "buttonEditDomain": "Edit domain",
       "titleCreateDomain": "Create domain",
       "titleEditDomain": "Edit domain \"{name}\"",
-      "textDomainDescription": "Each selected language must have its own domain, in order to work in your online Sales Channel. You can also add custom domains here.",
+      "textDomainDescription": "Each selected language must have its own domain, in order to work in your Frontend. You can also add custom domains here.",
       "textApiAccessDescription": "In order to get API access, you need the API key shown below. Generating the key anew will overwrite the old key and by that terminate all existing access routes that were set up with it. <strong>This action cannot be undone.</strong>",
-      "textActiveDescription": "Switching off a Sales Channel will make it inaccessible to visitors as well as API connections.",
+      "textActiveDescription": "Switching off a Frontend will make it inaccessible to visitors as well as API connections.",
       "columnDomainUrl": "URL",
       "columnDomainLanguage": "Language",
       "columnDomainSnippetSet": "Snippet set",
       "maintenanceModeTitle": "Maintenance mode",
-      "maintenanceModeDescription": "In maintenance mode the Sales Channel will be invisible to visitors. However, you will be able to access it, using white listed IPs. This way you can safely work on the Sales Channel data, while blocking visitors at a maintenance mode screen.",
+      "maintenanceModeDescription": "In maintenance mode the Frontend will be invisible to visitors. However, you will be able to access it, using white listed IPs. This way you can safely work on the Frontend data, while blocking visitors at a maintenance mode screen.",
       "labelMaintenanceActive": "Maintenance",
       "ipAddressAllowlist": "IP addresses allowlist",
       "ipAddressAllowlistHelpText": "Add IP addresses to the allowlist in order to allow selective access to your shop. You may add IPv4 and IPv6 addresses as needed.",
@@ -154,7 +154,7 @@
         "columnProductName": "Product name",
         "columnActive": "Active",
         "columnProductNumber": "Product number",
-        "inheritVariantNotRemovableTooltip": "The sales channel assignment of this variant product is inherited by its main product."
+        "inheritVariantNotRemovableTooltip": "The frontend assignment of this variant product is inherited by its main product."
       },
       "productComparison": {
         "inputHeaderLabel": "Header row",
@@ -203,20 +203,20 @@
           "518400": "6 days",
           "604800": "1 week"
         },
-        "storefront": "Storefront Sales Channel",
-        "storefrontDomain": "Storefront domain",
+        "storefront": "Frontend",
+        "storefrontDomain": "Frontend domain",
         "storefrontDomainLanguage": {
           "label": "Language",
-          "help": "Automatically selected by Sales Channel domain"
+          "help": "Automatically selected by Frontend domain"
         },
         "storefrontDomainCurrency": {
           "label": "Currency"
         },
         "storefrontSalesChannelCustomerGroup": {
           "label": "Customer Group",
-          "help": "Automatically selected by Sales Channel"
+          "help": "Automatically selected by Frontend"
         },
-        "messageAccessKeyChanged": "Access key and export URL are active only after saving the Sales Channel.",
+        "messageAccessKeyChanged": "Access key and export URL are active only after saving the Frontend.",
         "templates": {
           "label": "Template",
           "placeholderSelectTemplate": "Select a template...",
@@ -226,10 +226,10 @@
             "google-product-search-de": "Google Shopping (XML)"
           },
           "modal-title": "Apply template",
-          "modal-message": "If you apply the template, existing data in this Sales Channel will be overwritten. Settings and template tabs will be subject to these changes.",
+          "modal-message": "If you apply the template, existing data in this Frontend will be overwritten. Settings and template tabs will be subject to these changes.",
           "modal-confirm": "Apply template",
           "message": {
-            "template-applied-message": "Template data has been applied, but not yet saved. Please save this Sales Channel to keep the changes."
+            "template-applied-message": "Template data has been applied, but not yet saved. Please save this Frontend to keep the changes."
           }
         },
         "cliCommand": "CLI Command to generate the product export"
@@ -256,7 +256,7 @@
           "trackingId": {
             "label": "Tracking ID",
             "placeHolder": "Enter tracking ID...",
-            "helpText": "When logged into your Google Analytics account, you will receive a tracking ID in the format `G-XXXXXXXXXX`. If you want to use the Google Tag Manager, then use an ID which starts with `GTM-`. The storefront then automatically includes the Google Tag Manager script: `https://www.googletagmanager.com/gtm.js?id=...`. Otherwise, it uses `https://www.googletagmanager.com/gtag/js?id=...`."
+            "helpText": "When logged into your Google Analytics account, you will receive a tracking ID in the format `G-XXXXXXXXXX`. If you want to use the Google Tag Manager, then use an ID which starts with `GTM-`. The frontend then automatically includes the Google Tag Manager script: `https://www.googletagmanager.com/gtm.js?id=...`. Otherwise, it uses `https://www.googletagmanager.com/gtag/js?id=...`."
           },
           "active": {
             "label": "Activate Google Analytics"
@@ -312,7 +312,7 @@
   "sw-privileges": {
     "permissions": {
       "sales_channel": {
-        "label": "Sales Channels"
+        "label": "Frontends"
       }
     }
   }

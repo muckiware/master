@@ -249,8 +249,8 @@ export default {
             ];
         },
 
-        storefrontEsEnable() {
-            return Context.app.storefrontEsEnable ?? false;
+        frontendEsEnable() {
+            return Context.app.frontendEsEnable ?? false;
         },
     },
 

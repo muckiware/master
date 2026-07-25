@@ -63,7 +63,7 @@
 
                 {% block sw_sales_channel_detail_content_tab_products %}
                 <sw-tabs-item
-                    v-if="isHeadless || isStorefront"
+                    v-if="isHeadless || isFrontend"
                     :route="{ name: 'sw.sales.channel.detail.products', params: { id: $route.params.id } }"
                     :title="$tc('sw-sales-channel.detail.tabProducts')"
                 >
@@ -85,7 +85,7 @@
 
                 {%  block sw_sales_channel_detail_content_tab_analytics %}
                 <sw-tabs-item
-                    v-if="isStorefront"
+                    v-if="isFrontend"
                     :route="{ name: 'sw.sales.channel.detail.analytics', params: { id: $route.params.id } }"
                     :title="$tc('sw-sales-channel.detail.tabAnalytics')"
                 >
@@ -110,7 +110,7 @@
                         :is="Component"
                         :sales-channel="salesChannel"
                         :product-export="productExport"
-                        :storefront-sales-channel-criteria="storefrontSalesChannelCriteria"
+                        :frontend-sales-channel-criteria="frontendSalesChannelCriteria"
                         :custom-field-sets="customFieldSets"
                         :is-loading="isLoading"
                         :product-comparison-access-url="productComparison.productComparisonAccessUrl"

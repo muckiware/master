@@ -10,7 +10,7 @@
     },
     "generalTab": {
       "labelSearchBehaviour": "Search behaviour",
-      "textTitleSearchBehaviour": "Predefine your Sales Channels' search behaviour.",
+      "textTitleSearchBehaviour": "Predefine your Frontends' search behaviour.",
       "labelSearchAndCondition": "“AND” Search",
       "textSearchAndConditionExplain": "Search results match with every single element of the entered search term.\nExample: \"Jeans summer\" will find search results that contain both search terms \"jeans\" and \"summer\".",
       "labelSearchOrCondition": "“OR” Search",
@@ -23,7 +23,7 @@
       "buttonAddExcludedSearchTerms" : "Exclude search term",
       "labelExcludedSearchTermsNoResults": "No results found.",
       "labelSearchableContent": "Searchable content",
-      "textDescriptionSearchableContent": "All searchable content is listed in the table below. To customise search results in your Sales Channels go ahead and either exclude content from being searchable at all or tweak the ranking of each individual element to your liking. Higher ranking elements have an increased \"search value\" and will place higher in the search results.",
+      "textDescriptionSearchableContent": "All searchable content is listed in the table below. To customise search results in your Frontends go ahead and either exclude content from being searchable at all or tweak the ranking of each individual element to your liking. Higher ranking elements have an increased \"search value\" and will place higher in the search results.",
       "buttonResetDefault": "Reset to default",
       "linkExample": "Show example",
       "buttonAddContent": "Add searchable content",
@@ -95,13 +95,13 @@
         "success": "Product indexes built."
       },
       "loadError": "An error occurred while loading your configuration.",
-      "notSupportedLanguageError": "The selected language is not available in the selected Sales Channel"
+      "notSupportedLanguageError": "The selected language is not available in the selected Frontend"
     },
     "liveSearchTab": {
-      "titleCard": "Sales Channel live search",
+      "titleCard": "Frontend live search",
       "textDescription": "Test your custom search settings below.",
-      "labelSalesChannelSelect": "Sales Channel",
-      "textPlaceholderSalesChannel": "Select a Sales Channel...",
+      "labelSalesChannelSelect": "Frontend",
+      "textPlaceholderSalesChannel": "Select a Frontend...",
       "textPlaceholderSorting": "Select sorting...",
       "linkRebuildSearchIndex": "Rebuild search index",
       "labelName": "Search result",

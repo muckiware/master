@@ -298,7 +298,7 @@
 
     {% block sw_sales_channel_detail_base_options_hreflang %}
     <sw-sales-channel-detail-hreflang
-        v-if="salesChannel && isStorefront"
+        v-if="salesChannel && isFrontend"
         :sales-channel="salesChannel"
         :disabled="!acl.can('sales_channel.editor') || undefined"
         :is-loading="isLoading"
@@ -326,14 +326,14 @@
             v-model:value="productExport.storefrontSalesChannelId"
             class="sw-sales-channel-detail__product-comparison-storefront"
             :label="$tc('sw-sales-channel.detail.productComparison.storefront')"
-            :criteria="storefrontSalesChannelCriteria"
+            :criteria="frontendSalesChannelCriteria"
             label-property="name"
             :disabled="!acl.can('sales_channel.editor') || undefined"
             value-property="id"
             entity="sales_channel"
             required
             show-clearable-button
-            @update:value="onStorefrontSelectionChange"
+            @update:value="onFrontendSelectionChange"
         />
         {% endblock %}
 
@@ -342,7 +342,7 @@
             v-model:value="productExport.salesChannelDomainId"
             class="sw-sales-channel-detail__product-comparison-domain"
             :label="$tc('sw-sales-channel.detail.productComparison.storefrontDomain')"
-            :criteria="storefrontSalesChannelDomainCriteria"
+            :criteria="frontendSalesChannelDomainCriteria"
             label-property="url"
             value-property="id"
             entity="sales_channel_domain"
@@ -350,7 +350,7 @@
             show-clearable-button
             :disabled="(!productExport.salesChannelDomainId && !productExport.storefrontSalesChannelId) || !acl.can('sales_channel.editor') || undefined"
             :error="productExportSalesChannelDomainIdError"
-            @update:value="onStorefrontDomainSelectionChange"
+            @update:value="onFrontendDomainSelectionChange"
         />
         {% endblock %}
 
@@ -362,7 +362,7 @@
             <sw-entity-single-select
                 v-model:value="productExport.currencyId"
                 :label="$tc('sw-sales-channel.detail.productComparison.storefrontDomainCurrency.label')"
-                :criteria="storefrontSalesChannelCurrencyCriteria"
+                :criteria="frontendSalesChannelCurrencyCriteria"
                 label-property="name"
                 value-property="id"
                 required

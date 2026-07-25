@@ -29,7 +29,7 @@ use Symfony\Component\HttpKernel\KernelEvents;
 #[Package('framework')]
 class CacheResponseSubscriberDecorator implements EventSubscriberInterface
 {
-    private const POLICY_AREA_STOREFRONT = 'storefront';
+    private const POLICY_AREA_FRONTEND = 'storefront';
     private const POLICY_AREA_STORE_API = 'store_api';
 
     /**
@@ -81,7 +81,7 @@ class CacheResponseSubscriberDecorator implements EventSubscriberInterface
 
         $this->cacheHeadersService->applyCacheHeaders($context, $response);
 
-        $area = $this->isStoreApi($request) ? self::POLICY_AREA_STORE_API : self::POLICY_AREA_STOREFRONT;
+        $area = $this->isStoreApi($request) ? self::POLICY_AREA_STORE_API : self::POLICY_AREA_FRONTEND;
 
         if (!$this->httpCacheEnabled) {
             // no-store attribute still has to be processed even in early return case

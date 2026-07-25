@@ -24,7 +24,7 @@
       "textFilterInheritedLanguages": "Zeige nur vererbte Sprachen",
       "manageSnippets": "Textbausteine verwalten",
       "cardTitle": "Sprachen",
-      "cardSubtitle": "Sprachen können Verkaufskanal-Domains zugeordnet werden. Sie ermöglichen die Übersetzung von Inhalten in Kategorien, Produkten, Erlebniswelten usw."
+      "cardSubtitle": "Sprachen können Frontend-Domains zugeordnet werden. Sie ermöglichen die Übersetzung von Inhalten in Kategorien, Produkten, Erlebniswelten usw."
     },
     "detail": {
       "textHeadline": "Neue Sprache",

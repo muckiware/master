@@ -231,7 +231,7 @@
           },
           "infoText": {
             "autoSlideTitle": "Bedenken hinsichtlich der Barrierefreiheit",
-            "autoSlide": "Das Aktivieren dieser Funktion kann dazu führen, dass Teile Deiner Storefront für Menschen mit Einschränkungen nicht zugänglich sind. Dies kann eine Nichteinhaltung der in Deiner Gerichtsbarkeit geltenden Barrierefreiheitsgesetze darstellen (z.B. des Europäischen Rechtsakts zur Barrierefreiheit). Mit dem Fortfahren erkennst Du dieses Risiko an und übernimmst die volle Verantwortung.",
+            "autoSlide": "Das Aktivieren dieser Funktion kann dazu führen, dass Teile Deines Frontends für Menschen mit Einschränkungen nicht zugänglich sind. Dies kann eine Nichteinhaltung der in Deiner Gerichtsbarkeit geltenden Barrierefreiheitsgesetze darstellen (z.B. des Europäischen Rechtsakts zur Barrierefreiheit). Mit dem Fortfahren erkennst Du dieses Risiko an und übernimmst die volle Verantwortung.",
             "listingElement": "Die Produktdaten für dieses Element werden automatisiert über die Kategoriezuweisung befüllt. Der Inhalt zeigt nur eine ungefähre Vorschau."
           }
         },
@@ -768,10 +768,10 @@
         "labelCategories": "Kategorien",
         "placeholderCategories": "Wähle Kategorien aus ...",
         "placeholderLandingPages": "Wähle Landingpages aus ...",
-        "labelSalesChannel": "Verkaufskanal",
-        "placeholderSalesChannel": "Wähle einen Verkaufskanal ...",
-        "resetOptionSalesChannel": "Alle Verkaufskanäle",
-        "helpTextSalesChannel": "Layouts, die spezifischen Verkaufskanälen zugewiesen sind, überschreiben Layout-Zuweisungen in \"Alle Verkaufskanäle\".",
+        "labelSalesChannel": "Frontend",
+        "placeholderSalesChannel": "Wähle ein Frontend ...",
+        "resetOptionSalesChannel": "Alle Frontends",
+        "helpTextSalesChannel": "Layouts, die spezifischen Frontends zugewiesen sind, überschreiben Layout-Zuweisungen in \"Alle Frontends\".",
         "labelShopPages": "Shopseiten",
         "confirmChangesTextCategories": "Du hast Layout-Zuweisungen von Kategorie entfernt. Wenn Du diese Änderungen bestätigst, ist für diese Kategorien kein Layout mehr zugewiesen.",
         "confirmChangesTextCategoriesAssignedLayouts": "Einigen der ausgewählten Kategorien ist bereits ein Layout zugewiesen. Wenn Du fortfährst, werden die bestehenden Zuweisungen durch das aktuelle Layout ersetzt.",

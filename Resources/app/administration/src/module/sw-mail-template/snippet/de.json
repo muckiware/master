@@ -4,7 +4,7 @@
       "mainMenuItemList": "Übersicht",
       "mainMenuItemGeneral": "E-Mail-Templates",
       "placeholderSearchBar": "Durchsuche E-Mail-Templates ...",
-      "notificationTestMailSalesChannelErrorMessage": "Bitte wähle einen Verkaufskanal aus",
+      "notificationTestMailSalesChannelErrorMessage": "Bitte wähle einen Frontend aus",
       "notificationTestMailErrorMessage": "Beim Versand der Test-Mail ist ein Fehler aufgetreten.",
       "notificationTestMailSuccessMessage": "Die Test-Mail ist erfolgreich versandt worden.",
       "notificationSyntaxValidationErrorMessage": "Ungültiges Template, überprüfe die Syntax: {errorMsg}",
@@ -18,7 +18,7 @@
       "buttonAddMailTemplate": "E-Mail-Template hinzufügen",
       "columnMailType": "Typ",
       "columnDescription": "Beschreibung",
-      "columnSalesChannels": "Verkaufskanal",
+      "columnSalesChannels": "Frontend",
       "contextMenuDelete": "Löschen",
       "contextMenuEdit": "Bearbeiten",
       "contextMenuDuplicate": "Duplizieren",
@@ -35,10 +35,10 @@
         "titleCard": "Information",
         "labelMailType": "Typ",
         "labelDescription": "Beschreibung",
-        "labelSalesChannels": "Verkaufskanal",
+        "labelSalesChannels": "Frontend",
         "placeholderMailType": "Wähle einen Typ ...",
         "placeholderDescription": "Gib eine Beschreibung ein ...",
-        "placeholderSalesChannels": "Wähle Verkaufskanäle aus ..."
+        "placeholderSalesChannels": "Wähle Frontends aus ..."
       },
       "options": {
         "titleCard": "Optionen",
@@ -69,7 +69,7 @@
         "titleShowPreview": "Vorschau anzeigen",
         "titleShowAvailableVariables": "Variablen",
         "copyTooltip": "In die Zwischenablage kopieren.",
-        "languageNotAssignedToSalesChannel": "Die aktuelle Sprache ist nicht dem gewählten Verkaufskanal zugewiesen."
+        "languageNotAssignedToSalesChannel": "Die aktuelle Sprache ist nicht dem gewählten Frontend zugewiesen."
       },
       "previewModalTitle": "Vorschau",
       "buttonSave": "Speichern",
@@ -92,14 +92,14 @@
       "buttonAddMailHeaderFooter": "Kopf- und Fußzeile hinzufügen",
       "columnName": "Name",
       "columnDescription": "Beschreibung",
-      "columnSalesChannels": "Verkaufskanal",
+      "columnSalesChannels": "Frontend",
       "contextMenuDelete": "Löschen",
       "contextMenuEdit": "Bearbeiten",
       "contextMenuDuplicate": "Duplizieren",
       "textDeleteConfirm": "Möchtest Du die Kopf- und Fußzeile \"{name}\" wirklich löschen?",
       "buttonDelete": "Löschen",
       "titleSidebarItemRefresh": "Aktualisieren",
-      "messageDeleteError": "Die Kopf- und Fußzeile \"{name}\" kann nicht gelöscht werden, solange Verkaufskanäle konfiguriert sind.",
+      "messageDeleteError": "Die Kopf- und Fußzeile \"{name}\" kann nicht gelöscht werden, solange Frontends konfiguriert sind.",
       "emptyStateTitle": "Noch keine Kopf- und Fußzeile",
       "emptyStateSubTitle": "Füge Kopf- und Fußzeile über den \"Hinzufügen\"-Button."
     },
@@ -108,10 +108,10 @@
         "titleCard": "Informationen",
         "labelName": "Name",
         "labelDescription": "Beschreibung",
-        "labelSalesChannels": "Verkaufskanäle",
+        "labelSalesChannels": "Frontends",
         "placeholderName": "Namen eingeben ...",
         "placeholderDescription": "Beschreibung eingeben ...",
-        "placeholderSalesChannels": "Wähle zutreffende Verkaufskanäle ..."
+        "placeholderSalesChannels": "Wähle zutreffende Frontends ..."
       },
       "header": {
         "titleCard": "Mail-Kopfzeile",
@@ -135,8 +135,8 @@
     },
     "modal": {
       "title": "Mehrere Zuweisungen",
-      "mainContent": "Für die folgenden Verkaufskanäle existiert bereits ein Kopf- und Fußzeilen-Template. Wenn Du dieses Template speicherst, wird die Zuweisung des bisherigen Templates überschrieben.",
-      "affectedList": "Die folgenden Verkaufskanäle sind betroffen:"
+      "mainContent": "Für die folgenden Frontends existiert bereits ein Kopf- und Fußzeilen-Template. Wenn Du dieses Template speicherst, wird die Zuweisung des bisherigen Templates überschrieben.",
+      "affectedList": "Die folgenden Frontends sind betroffen:"
     }
   },
   "sw-privileges": {
