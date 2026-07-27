@@ -58,7 +58,11 @@ export default {
         },
 
         productExport() {
-            if (this.salesChannel && this.salesChannel.productExports.first()) {
+            if (!this.isProductComparison) {
+                return {};
+            }
+
+            if (this.salesChannel && this.salesChannel.productExports?.first()) {
                 return this.salesChannel.productExports.first();
             }
 
@@ -101,7 +105,7 @@ export default {
         },
 
         salesChannelRepository() {
-            return this.repositoryFactory.create('sales_channel');
+            return this.repositoryFactory.create('frontend');
         },
 
         salesChannelAnalyticsRepository() {
@@ -198,16 +202,15 @@ export default {
                     this.generateAccessUrl();
 
                     this.isLoading = false;
+                })
+                .catch(() => {
+                    this.isLoading = false;
                 });
         },
 
         getLoadSalesChannelCriteria() {
             const criteria = new Criteria(1, 25);
 
-            criteria.addAssociation('paymentMethods');
-            criteria.addAssociation('shippingMethods');
-            criteria.addAssociation('countries');
-            criteria.getAssociation('currencies').addSorting(Criteria.sort('name', 'ASC'));
             criteria.addAssociation('domains');
             criteria
                 .getAssociation('languages')
@@ -215,13 +218,8 @@ export default {
                 .addFilter(Criteria.equals('active', true));
             criteria.addAssociation('analytics');
 
-            criteria.addAssociation('productExports');
-            criteria.addAssociation('productExports.salesChannelDomain.salesChannel');
-
             criteria.getAssociation('domains.language').addSorting(Criteria.sort('name', 'ASC'));
             criteria.getAssociation('domains.snippetSet').addSorting(Criteria.sort('name', 'ASC'));
-            criteria.addAssociation('domains.currency');
-            criteria.addAssociation('domains.productExports');
 
             return criteria;
         },

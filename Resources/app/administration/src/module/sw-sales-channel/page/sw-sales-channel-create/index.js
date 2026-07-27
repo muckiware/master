@@ -7,7 +7,7 @@ import template from './sw-sales-channel-create.html.twig';
 const utils = Shopware.Utils;
 
 const insertIdIntoRoute = (to, from, next) => {
-    if (to.name.includes('sw.sales.channel.create') && !to.params.id) {
+    if (to.name.includes('sw.frontend.create') && !to.params.id) {
         to.params.id = utils.createId();
     }
 
@@ -70,7 +70,7 @@ export default {
         saveFinish() {
             this.isSaveSuccessful = false;
             this.$router.push({
-                name: 'sw.sales.channel.detail',
+                name: 'sw.frontend.detail',
                 params: { id: this.salesChannel.id },
             });
         },

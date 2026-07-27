@@ -54,29 +54,21 @@
             >
                 {%  block sw_sales_channel_detail_content_tab_general %}
                 <sw-tabs-item
-                    :route="{ name: 'sw.sales.channel.detail.base', params: { id: $route.params.id } }"
+                    :route="{ name: 'sw.frontend.detail.base', params: { id: $route.params.id } }"
                     :title="$tc('sw-sales-channel.detail.tabBase')"
                 >
                     {{ $tc('sw-sales-channel.detail.tabBase') }}
                 </sw-tabs-item>
                 {% endblock %}
 
-                {% block sw_sales_channel_detail_content_tab_products %}
-                <sw-tabs-item
-                    v-if="isHeadless || isFrontend"
-                    :route="{ name: 'sw.sales.channel.detail.products', params: { id: $route.params.id } }"
-                    :title="$tc('sw-sales-channel.detail.tabProducts')"
-                >
-                    {{ $tc('sw-sales-channel.detail.tabProducts') }}
-                </sw-tabs-item>
-                {% endblock %}
+                {% block sw_sales_channel_detail_content_tab_products %}{% endblock %}
 
                 {% block sw_sales_channel_detail_content_tab_theme %}{% endblock %}
 
                 {%  block sw_sales_channel_detail_content_tab_product_comparison %}
                 <sw-tabs-item
                     v-if="isProductComparison && !isLoading"
-                    :route="{ name: 'sw.sales.channel.detail.productComparison', params: { id: $route.params.id } }"
+                    :route="{ name: 'sw.frontend.detail.productComparison', params: { id: $route.params.id } }"
                     :title="$tc('sw-sales-channel.detail.tabProductComparison')"
                 >
                     {{ $tc('sw-sales-channel.detail.tabProductComparison') }}
@@ -86,7 +78,7 @@
                 {%  block sw_sales_channel_detail_content_tab_analytics %}
                 <sw-tabs-item
                     v-if="isFrontend"
-                    :route="{ name: 'sw.sales.channel.detail.analytics', params: { id: $route.params.id } }"
+                    :route="{ name: 'sw.frontend.detail.analytics', params: { id: $route.params.id } }"
                     :title="$tc('sw-sales-channel.detail.tabAnalytics')"
                 >
                     {{ $tc('sw-sales-channel.detail.tabAnalytics') }}

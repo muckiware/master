@@ -28,7 +28,7 @@ export default {
             productsForSalesChannel: {},
             isLoading: true,
             sortBy: 'name',
-            searchConfigEntity: 'sales_channel',
+            searchConfigEntity: 'frontend',
             lastSortedColumn: null,
         };
     },
@@ -46,7 +46,7 @@ export default {
                     property: 'name',
                     dataIndex: 'name',
                     allowResize: true,
-                    routerLink: 'sw.sales.channel.detail',
+                    routerLink: 'sw.frontend.detail',
                     label: 'sw-sales-channel.list.columnName',
                     primary: true,
                 },
@@ -84,7 +84,7 @@ export default {
         },
 
         salesChannelRepository() {
-            return this.repositoryFactory.create('sales_channel');
+            return this.repositoryFactory.create('frontend');
         },
 
         salesChannelCriteria() {

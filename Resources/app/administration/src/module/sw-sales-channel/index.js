@@ -71,16 +71,16 @@ Shopware.Component.register('sw-sales-channel-measurement', () => import('./comp
 /* eslint-enable max-len, sw-deprecation-rules/private-feature-declarations */
 
 // eslint-disable-next-line sw-deprecation-rules/private-feature-declarations
-Module.register('sw-sales-channel', {
+Module.register('sw-frontend', {
     type: 'core',
-    name: 'sales-channel',
+    name: 'frontend',
     title: 'sw-sales-channel.general.titleMenuItems',
     description: 'The module for managing Sales Channels.',
     version: '1.0.0',
     targetVersion: '1.0.0',
     color: '#14D7A5',
     icon: 'solid-server',
-    entity: 'sales_channel',
+    entity: 'frontend',
 
     searchMatcher: (regex, labelType, manifest) => {
         const match = labelType.toLowerCase().match(regex);
@@ -107,18 +107,18 @@ Module.register('sw-sales-channel', {
             component: 'sw-sales-channel-detail',
             path: 'detail/:id',
             meta: {
-                parentPath: 'sw.sales.channel.list',
+                parentPath: 'sw.frontend.list',
                 privilege: 'sales_channel.viewer',
             },
             redirect: {
-                name: 'sw.sales.channel.detail.base',
+                name: 'sw.frontend.detail.base',
             },
             children: {
                 base: {
                     component: 'sw-sales-channel-detail-base',
                     path: 'base',
                     meta: {
-                        parentPath: 'sw.sales.channel.list',
+                        parentPath: 'sw.frontend.list',
                         privilege: 'sales_channel.viewer',
                     },
                 },
@@ -126,7 +126,7 @@ Module.register('sw-sales-channel', {
                     component: 'sw-sales-channel-detail-products',
                     path: 'products',
                     meta: {
-                        parentPath: 'sw.sales.channel.list',
+                        parentPath: 'sw.frontend.list',
                         privilege: 'sales_channel.viewer',
                     },
                 },
@@ -134,7 +134,7 @@ Module.register('sw-sales-channel', {
                     component: 'sw-sales-channel-detail-product-comparison',
                     path: 'product-comparison',
                     meta: {
-                        parentPath: 'sw.sales.channel.list',
+                        parentPath: 'sw.frontend.list',
                         privilege: 'sales_channel.viewer',
                     },
                 },
@@ -142,7 +142,7 @@ Module.register('sw-sales-channel', {
                     component: 'sw-sales-channel-detail-analytics',
                     path: 'analytics',
                     meta: {
-                        parentPath: 'sw.sales.channel.list',
+                        parentPath: 'sw.frontend.list',
                         privilege: 'sales_channel.viewer',
                     },
                 },
@@ -153,14 +153,14 @@ Module.register('sw-sales-channel', {
             component: 'sw-sales-channel-create',
             path: 'create/:typeId',
             redirect: {
-                name: 'sw.sales.channel.create.base',
+                name: 'sw.frontend.create.base',
             },
             children: {
                 base: {
                     component: 'sw-sales-channel-create-base',
                     path: 'base',
                     meta: {
-                        parentPath: 'sw.sales.channel.list',
+                        parentPath: 'sw.frontend.list',
                         privilege: 'sales_channel.creator',
                     },
                 },

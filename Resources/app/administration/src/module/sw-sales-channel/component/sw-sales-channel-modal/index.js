@@ -84,7 +84,7 @@ export default {
 
             if (id) {
                 this.$router.push({
-                    name: 'sw.sales.channel.create',
+                    name: 'sw.frontend.create',
                     params: { typeId: id },
                 });
             }

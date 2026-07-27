@@ -74,7 +74,7 @@ export default {
         },
 
         salesChannelRepository() {
-            return this.repositoryFactory.create('sales_channel');
+            return this.repositoryFactory.create('frontend');
         },
 
         mainNavigationCriteria() {

@@ -30,7 +30,7 @@ export default {
 
     computed: {
         salesChannelRepository() {
-            return this.repositoryFactory.create('sales_channel');
+            return this.repositoryFactory.create('frontend');
         },
 
         canCreateSalesChannels() {
@@ -41,7 +41,7 @@ export default {
             const criteria = new Criteria(1, 7);
 
             criteria.addIncludes({
-                sales_channel: [
+                frontend: [
                     'name',
                     'type',
                     'active',
@@ -55,7 +55,7 @@ export default {
                 ],
             });
 
-            criteria.addSorting(Criteria.sort('sales_channel.name', 'ASC'));
+            criteria.addSorting(Criteria.sort('name', 'ASC'));
             criteria.addAssociation('type');
             criteria.addAssociation('domains');
 
@@ -77,7 +77,7 @@ export default {
             this.salesChannels.forEach((salesChannel) => {
                 flatTree.add({
                     id: salesChannel.id,
-                    path: 'sw.sales.channel.detail',
+                    path: 'sw.frontend.detail',
                     params: { id: salesChannel.id },
                     color: '#D8DDE6',
                     label: {
@@ -101,7 +101,7 @@ export default {
                 color: '#D8DDE6',
                 icon: 'regular-ellipsis-v',
                 label: this.$tc('sw-sales-channel.general.titleMenuMoreItems'),
-                path: 'sw.sales.channel.list',
+                path: 'sw.frontend.list',
                 position: -1, // use last position
             };
         },

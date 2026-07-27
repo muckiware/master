@@ -270,6 +270,7 @@
         }
       },
       "titleShippingPayment": "Zahlung und Versand",
+      "titleCurrenciesAndTax": "Währungen und Steuern",
       "labelTaxCalculation": "Steuerberechnung",
       "descriptionTaxCalculation": "Eine Änderung dieser Einstellung könnte zu Abrechnungsproblemen mit externen Zahlungsanbietern führen. \nInformiere Dich, wie die Mehrwertsteuer von Deinem Zahlungsanbieter berechnet wird, bevor Du Änderungen vornimmst.",
       "taxCalculation": {

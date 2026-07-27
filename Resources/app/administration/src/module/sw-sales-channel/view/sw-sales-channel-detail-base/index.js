@@ -103,12 +103,6 @@ export default {
             isFileNameChecking: false,
             disableGenerateByCronjob: false,
             knownIps: [],
-            mainCategoriesCollection: null,
-            footerCategoriesCollection: null,
-            serviceCategoriesCollection: null,
-            defaultMeasurementSystemId: null,
-            defaultLengthUnitId: null,
-            defaultWeightUnitId: null,
         };
     },
 
@@ -130,7 +124,7 @@ export default {
         },
 
         salesChannelRepository() {
-            return this.repositoryFactory.create('sales_channel');
+            return this.repositoryFactory.create('frontend');
         },
 
         isProductComparison() {
@@ -155,63 +149,12 @@ export default {
             return criteria.addFilter(Criteria.equals('salesChannels.id', this.productExport.storefrontSalesChannelId));
         },
 
-        paymentMethodCriteria() {
-            const criteria = new Criteria(1, 25);
-
-            criteria.addSorting(Criteria.sort('name', 'ASC'));
-
-            return criteria;
-        },
-
-        countryCriteria() {
-            const criteria = new Criteria(1, 25);
-
-            criteria.addSorting(Criteria.sort('position', 'ASC'));
-            criteria.addSorting(Criteria.sort('name', 'ASC'));
-
-            return criteria;
-        },
-
         languageCriteria() {
             const criteria = new Criteria();
 
             criteria.addFilter(Criteria.equals('active', true));
 
             return criteria;
-        },
-
-        disabledCountries() {
-            return this.salesChannel?.countries?.filter((country) => country.active === false) ?? [];
-        },
-
-        disabledCountryVariant() {
-            return this.disabledCountries.find((country) => country.id === this.salesChannel.countryId)
-                ? 'attention'
-                : 'info';
-        },
-
-        disabledPaymentMethods() {
-            return this.salesChannel?.paymentMethods?.filter((paymentMethod) => paymentMethod.active === false) ?? [];
-        },
-
-        disabledPaymentMethodVariant() {
-            return this.disabledPaymentMethods.find(
-                (paymentMethod) => paymentMethod.id === this.salesChannel.paymentMethodId,
-            )
-                ? 'attention'
-                : 'info';
-        },
-
-        disabledShippingMethods() {
-            return this.salesChannel?.shippingMethods?.filter((shippingMethod) => shippingMethod.active === false) ?? [];
-        },
-
-        disabledShippingMethodVariant() {
-            return this.disabledShippingMethods.find(
-                (shippingMethod) => shippingMethod.id === this.salesChannel.shippingMethodId,
-            )
-                ? 'attention'
-                : 'info';
         },
 
         unservedLanguages() {
@@ -417,8 +360,6 @@ export default {
 
         ...mapPropertyErrors('salesChannel', [
             'name',
-            'customerGroupId',
-            'navigationCategoryId',
         ]),
 
         ...mapPropertyErrors('productExport', [
@@ -430,73 +371,8 @@ export default {
             'currencyId',
         ]),
 
-        categoryRepository() {
-            return this.repositoryFactory.create('category');
-        },
-
-        mainCategoryCriteria() {
-            const criteria = new Criteria(1, 25);
-            criteria.addFilter(Criteria.equals('id', this.salesChannel.navigationCategoryId || null));
-
-            return criteria;
-        },
-
-        footerCategoryCriteria() {
-            const criteria = new Criteria(1, 25);
-            criteria.addFilter(Criteria.equals('id', this.salesChannel.footerCategoryId || null));
-
-            return criteria;
-        },
-
-        serviceCategoryCriteria() {
-            const criteria = new Criteria(1, 25);
-            criteria.addFilter(Criteria.equals('id', this.salesChannel.serviceCategoryId || null));
-
-            return criteria;
-        },
-
-        mainCategories() {
-            return this.mainCategoriesCollection ? this.mainCategoriesCollection : [];
-        },
-
-        footerCategories() {
-            return this.footerCategoriesCollection ? this.footerCategoriesCollection : [];
-        },
-
-        serviceCategories() {
-            return this.serviceCategoriesCollection ? this.serviceCategoriesCollection : [];
-        },
-
-        navigationCategoryPlaceholder() {
-            return this.salesChannel.navigationCategoryId ? '' : this.$tc('sw-category.base.link.categoryPlaceholder');
-        },
-
-        footerCategoryPlaceholder() {
-            return this.salesChannel.footerCategoryId ? '' : this.$tc('sw-category.base.link.categoryPlaceholder');
-        },
-
-        serviceCategoryPlaceholder() {
-            return this.salesChannel.serviceCategoryId ? '' : this.$tc('sw-category.base.link.categoryPlaceholder');
-        },
-
         salesChannelFavoritesService() {
             return Shopware.Service('salesChannelFavorites');
-        },
-
-        currencyCriteria() {
-            const criteria = new Criteria(1, 25);
-
-            criteria.addSorting(Criteria.sort('name', 'ASC'));
-
-            return criteria;
-        },
-
-        shippingMethodCriteria() {
-            const criteria = new Criteria(1, 25);
-
-            criteria.addSorting(Criteria.sort('name', 'ASC'));
-
-            return criteria;
         },
 
         /**
@@ -530,9 +406,6 @@ export default {
         'productExport.fileName'() {
             this.onChangeFileName();
         },
-        salesChannel() {
-            this.createCategoryCollections();
-        },
     },
 
     created() {
@@ -540,10 +413,6 @@ export default {
             this.knownIps = ips;
         });
 
-        this.createCategoryCollections();
-        this.defaultMeasurementSystemId = this.salesChannel?.measurementSystemId;
-        this.defaultLengthUnitId = this.salesChannel?.lengthUnitId;
-        this.defaultWeightUnitId = this.salesChannel?.weightUnitId;
     },
 
     methods: {
@@ -754,44 +623,6 @@ export default {
 
             this.disableGenerateByCronjob = this.productExport.interval === 0;
             this.productExport.generateByCronjob = !this.disableGenerateByCronjob;
-        },
-
-        createCategoryCollections() {
-            if (!this.salesChannel) {
-                return;
-            }
-
-            this.createCategoriesCollection(this.mainCategoryCriteria, 'mainCategoriesCollection');
-            this.createCategoriesCollection(this.footerCategoryCriteria, 'footerCategoriesCollection');
-            this.createCategoriesCollection(this.serviceCategoryCriteria, 'serviceCategoriesCollection');
-        },
-
-        async createCategoriesCollection(criteria, collectionName) {
-            this[collectionName] = await this.categoryRepository.search(criteria, Shopware.Context.api);
-        },
-
-        onMainSelectionAdd(item) {
-            this.salesChannel.navigationCategoryId = item.id;
-        },
-
-        onMainSelectionRemove() {
-            this.salesChannel.navigationCategoryId = null;
-        },
-
-        onFooterSelectionAdd(item) {
-            this.salesChannel.footerCategoryId = item.id;
-        },
-
-        onFooterSelectionRemove() {
-            this.salesChannel.footerCategoryId = null;
-        },
-
-        onServiceSelectionAdd(item) {
-            this.salesChannel.serviceCategoryId = item.id;
-        },
-
-        onServiceSelectionRemove() {
-            this.salesChannel.serviceCategoryId = null;
         },
 
         buildDisabledPaymentAlert(snippet, collection, property = 'name') {
