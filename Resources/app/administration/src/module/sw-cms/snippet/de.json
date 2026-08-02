@@ -2,8 +2,8 @@
   "sw-cms": {
     "general": {
       "placeholderSearchBar": "Layouts durchsuchen ...",
-      "mainMenuItemGeneral": "Erlebniswelten",
-      "moduleTitle": "Erlebniswelten",
+      "mainMenuItemGeneral": "CMS",
+      "moduleTitle": "CMS",
       "greeting": "Layouts",
       "createNewLayout": "Neues Layout anlegen",
       "deleteDisabledToolTip": "Das Layout ist noch mindestens einer Kategorie zugewiesen.",
@@ -843,7 +843,7 @@
   "sw-privileges": {
     "permissions": {
       "cms": {
-        "label": "Erlebniswelten"
+        "label": "CMS"
       }
     }
   }

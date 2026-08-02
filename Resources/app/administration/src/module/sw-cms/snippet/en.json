@@ -2,8 +2,8 @@
   "sw-cms": {
     "general": {
       "placeholderSearchBar": "Search layouts...",
-      "mainMenuItemGeneral": "Shopping Experiences",
-      "moduleTitle": "Shopping Experiences",
+      "mainMenuItemGeneral": "CMS",
+      "moduleTitle": "CMS",
       "greeting": "Layouts",
       "createNewLayout": "Create new layout",
       "deleteDisabledToolTip": "The layout you want to delete is still assigned to at least one category.",
@@ -843,7 +843,7 @@
   "sw-privileges": {
     "permissions": {
       "cms": {
-        "label": "Shopping Experiences"
+        "label": "CMS"
       }
     }
   }
