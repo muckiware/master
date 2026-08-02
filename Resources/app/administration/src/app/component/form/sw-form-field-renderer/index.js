@@ -365,6 +365,10 @@ export default {
         fetchSystemCurrency() {
             const systemCurrencyId = Shopware.Context.app.systemCurrencyId;
 
+            if (!systemCurrencyId) {
+                return;
+            }
+
             this.createRepository('currency')
                 .get(systemCurrencyId)
                 .then((response) => {
