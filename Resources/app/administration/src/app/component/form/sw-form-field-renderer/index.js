@@ -341,7 +341,6 @@ export default {
                 'multi-entity-id-select': 'sw-entity-multi-id-select',
                 'multi-select': 'sw-multi-select',
                 password: 'sw-password-field-deprecated',
-                price: 'sw-price-field',
                 radio: 'sw-radio-field',
                 'single-entity-id-select': 'sw-entity-single-select',
                 'single-select': 'sw-single-select',

@@ -3,7 +3,7 @@
     "description": "Administration app for the Shopware Core",
     "type": "library",
     "license": "MIT",
-    "version": "0.0.1.0",
+    "version": "0.0.1.1",
     "autoload": {
         "psr-4": {
             "Muckiware\\Master\\": ""

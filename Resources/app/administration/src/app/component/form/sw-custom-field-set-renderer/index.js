@@ -154,7 +154,6 @@ export default {
                 'sw-colorpicker',
                 'mt-colorpicker',
                 'sw-compact-colorpicker',
-                'sw-price-field',
                 'sw-tagged-field',
                 // for backwards compatibility with old custom fields
                 'sw-field',

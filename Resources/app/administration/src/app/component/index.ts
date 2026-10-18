@@ -220,18 +220,8 @@ export default () => {
     );
     Shopware.Component.register('sw-select-field', () => import('src/app/component/form/sw-select-field/index'));
     Shopware.Component.register('sw-radio-field', () => import('src/app/component/form/sw-radio-field/index'));
-    Shopware.Component.register(
-        'sw-purchase-price-field',
-        () => import('src/app/component/form/sw-purchase-price-field/index'),
-    );
-    Shopware.Component.register('sw-price-field', () => import('src/app/component/form/sw-price-field/index'));
     Shopware.Component.register('sw-password-field', () => import('src/app/component/form/sw-password-field/index'));
     Shopware.Component.register('sw-number-field', () => import('src/app/component/form/sw-number-field/index'));
-    Shopware.Component.register(
-        'sw-maintain-currencies-modal',
-        () => import('src/app/component/form/sw-maintain-currencies-modal/index'),
-    );
-    Shopware.Component.register('sw-list-price-field', () => import('src/app/component/form/sw-list-price-field/index'));
     Shopware.Component.register('sw-gtc-checkbox', () => import('src/app/component/form/sw-gtc-checkbox/index'));
     Shopware.Component.register(
         'sw-form-field-renderer',
@@ -670,6 +660,5 @@ export default () => {
     );
     Shopware.Component.extend('sw-one-to-many-grid', 'sw-data-grid', () => import('./entity/sw-one-to-many-grid/index'));
     Shopware.Component.extend('sw-entity-listing', 'sw-data-grid', () => import('./entity/sw-entity-listing/index'));
-    Shopware.Component.extend('sw-price-preview', 'sw-price-field', () => import('./base/sw-price-preview/index'));
     /* eslint-enable sw-deprecation-rules/private-feature-declarations, max-len */
 };

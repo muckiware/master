@@ -117,12 +117,8 @@ const componentNames = [
     'sw-select-field-deprecated',
     'sw-select-field',
     'sw-radio-field',
-    'sw-purchase-price-field',
-    'sw-price-field',
     'sw-password-field',
     'sw-number-field',
-    'sw-maintain-currencies-modal',
-    'sw-list-price-field',
     'sw-gtc-checkbox',
     'sw-form-field-renderer',
     'sw-file-input',
@@ -289,7 +285,6 @@ const componentNames = [
     'sw-grouped-single-select',
     'sw-one-to-many-grid',
     'sw-entity-listing',
-    'sw-price-preview',
 ];
 
 describe('src/app/component/index.ts', () => {

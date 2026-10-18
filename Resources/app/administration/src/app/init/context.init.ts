@@ -10,12 +10,6 @@ import useSession from '../composables/use-session';
 // eslint-disable-next-line sw-deprecation-rules/private-feature-declarations
 export default function initializeContext(): void {
     // Handle incoming context requests from the ExtensionAPI
-    Shopware.ExtensionAPI.handle('contextCurrency', () => {
-        return {
-            systemCurrencyId: Shopware.Context.app.systemCurrencyId ?? '',
-            systemCurrencyISOCode: Shopware.Context.app.systemCurrencyISOCode ?? '',
-        };
-    });
 
     Shopware.ExtensionAPI.handle('contextEnvironment', () => {
         return Shopware.Context.app.environment ?? 'production';

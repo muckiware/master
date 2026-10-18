@@ -1,1 +1,7 @@
 /Resources/public/administration/assets/
+.DS_Store
+**/.DS_Store
+/Resources/public/.vite/
+/Resources/public/administration/.vite/
+/Resources/public/assets/
+/Resources/app/administration/test/_mocks_/
