@@ -105,7 +105,7 @@
             <argument type="service" id="Shopware\Core\Maintenance\System\Service\AppUrlVerifier"/>
             <argument type="service" id="router"/>
             <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
-            <argument type="service" id="Shopware\Administration\Framework\Twig\ViteFileAccessorDecorator" on-invalid="null"/>
+            <argument type="service" id="Muckiware\Master\Framework\Twig\ViteFileAccessorDecorator"/>
             <argument type="service" id="filesystem"/>
             <argument type="service" id="Shopware\Core\Framework\App\ShopId\ShopIdProvider"/>
             <call method="setContainer">
