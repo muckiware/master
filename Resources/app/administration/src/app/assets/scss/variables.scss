@@ -56,6 +56,19 @@ $color-muckiware-brand-700: #853500;
 $color-muckiware-brand-800: #522100;
 $color-muckiware-brand-900: #1F0C00;
 
+// Shopware brand
+// Kept for compatibility with Shopware plugins, mapped to the Muckiware brand
+$color-shopware-brand-50: $color-muckiware-brand-50;
+$color-shopware-brand-100: $color-muckiware-brand-100;
+$color-shopware-brand-200: $color-muckiware-brand-200;
+$color-shopware-brand-300: $color-muckiware-brand-300;
+$color-shopware-brand-400: $color-muckiware-brand-400;
+$color-shopware-brand-500: $color-muckiware-brand-500;
+$color-shopware-brand-600: $color-muckiware-brand-600;
+$color-shopware-brand-700: $color-muckiware-brand-700;
+$color-shopware-brand-800: $color-muckiware-brand-800;
+$color-shopware-brand-900: $color-muckiware-brand-900;
+
 // Menu
 // Color description: Very dark desaturated blue
 $color-menu-start: #522100;
@@ -202,6 +215,11 @@ $color-module-green-900: #2cc077;
 $color-white: #fff;
 $color-black: #131313;
 $color-drag-select-box: #853500;
+
+// Storefront default theme ($sw-color-brand-* defaults)
+// Kept for compatibility with Shopware plugins that mimic storefront elements in admin previews
+$color-storefront-brand-primary: #0042a0;
+$color-storefront-brand-secondary: #474a57;
 
 /* ------------------------------------
  * 5. Gradients
