@@ -38,7 +38,9 @@
     "security-check": "./node_modules/.bin/nsp check",
     "test-debug": "node --inspect-brk TZ=UTC node_modules/.bin/jest --watch --config jest.config.js --runInBand --no-cache",
     "unit": "jest --config jest.config.js --ci",
-    "unit-setup": "npm run generate-component-import-resolver-map",
+    "unit:ci": "jest --config jest.ci.config.js --ci",
+    "unit-setup": "npm run generate-component-import-resolver-map && node ./scripts/entity-schema-fixture/index.mjs ensure",
+    "update-entity-schema-fixture": "node ./scripts/entity-schema-fixture/index.mjs update",
     "unit-watch": "jest --config jest.config.js --watch",
     "vite": "vite",
     "vite:build": "vite build"

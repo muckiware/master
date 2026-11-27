@@ -15,5 +15,9 @@ Component.override('sw-admin-menu', {
         canViewSalesChannels() {
             return this.acl.can('sales_channel.viewer');
         },
+
+        showSalesChannelMenu() {
+            return this.canViewSalesChannels && Shopware.Store.get('adminInterface').showFrontendsMenu;
+        },
     },
 });

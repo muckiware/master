@@ -91,6 +91,7 @@ import type { CmsPageStore } from './module/sw-cms/store/cms-page.store';
 import type { TopBarButtonStore } from './app/store/topbar-button.store';
 import type { TeaserPopoverStore } from './app/store/teaser-popover.store';
 import type { AdminMenuStore } from './app/store/admin-menu.store';
+import type { AdminInterfaceStore } from './app/store/admin-interface.store';
 import type { CmsService } from './module/sw-cms/service/cms.service';
 import type { ExtensionComponentSectionsStore } from './app/store/extension-component-sections.store';
 import type { BlockOverrideStore } from './app/store/block-override.store';
@@ -223,6 +224,7 @@ declare global {
         appAclService: $TSFixMe;
         appCmsService: $TSFixMe;
         appModulesService: AppModulesService;
+        adminInterfaceApiService: $TSFixMe;
         businessEventService: BusinessEventsApiService;
         cmsBlockFavorites: cmsBlockFavoritesService;
         cmsElementFavorites: cmsElementFavoritesService;
@@ -372,6 +374,7 @@ declare global {
         topBarButton: TopBarButtonStore;
         teaserPopover: TeaserPopoverStore;
         adminMenu: AdminMenuStore;
+        adminInterface: AdminInterfaceStore;
         extensionComponentSections: ExtensionComponentSectionsStore;
         blockOverride: BlockOverrideStore;
         extensionEntryRoutes: ExtensionEntryRoutes;

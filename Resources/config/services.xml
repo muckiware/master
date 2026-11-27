@@ -113,6 +113,17 @@
             </call>
         </service>
 
+        <service id="Muckiware\Master\Service\AdminInterfaceSettingsService">
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+        </service>
+
+        <service id="Muckiware\Master\Controller\AdminInterfaceController" public="true">
+            <argument type="service" id="Muckiware\Master\Service\AdminInterfaceSettingsService"/>
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+
 <!--        <service id="Muckiware\Master\Core\Framework\Demodata\PersonalData\CleanPersonalDataCommandDecorator" decorates="Shopware\Core\Framework\Demodata\PersonalData\CleanPersonalDataCommand" decoration-priority="1">-->
 <!--            <argument type="service" id="Muckiware\Master\Core\Framework\Demodata\PersonalData\CleanPersonalDataCommandDecorator.inner" />-->
 <!--        </service>-->
