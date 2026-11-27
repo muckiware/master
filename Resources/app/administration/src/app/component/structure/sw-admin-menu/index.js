@@ -146,7 +146,13 @@ The admin menu only supports up to three levels of nesting.`,
 
             this.navigationEntries.forEach((module) => tree.add(module));
 
-            return tree.convertToTree();
+            return tree.convertToTree().filter(
+                (entry) => this.adminInterfaceStore.isMainMenuEntryVisible(entry.id || entry.path),
+            );
+        },
+
+        adminInterfaceStore() {
+            return Shopware.Store.get('adminInterface');
         },
 
         sidebarCollapseIcon() {
@@ -253,6 +259,7 @@ The admin menu only supports up to three levels of nesting.`,
             Shopware.Utils.EventBus.on('sw-admin-menu/toggle-offcanvas', this.onToggleCanvas);
 
             this.initNavigation();
+            this.adminInterfaceStore.loadSettings();
         },
 
         beforeUnmountedComponent() {

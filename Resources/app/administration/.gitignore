@@ -13,6 +13,7 @@ selenium-debug.log
 /build/artifacts/jest/
 /build/artifacts/vue3/jest/
 .jestcache_vue3
+.jestcache/
 .yalc
 yalc.lock
 src/entity-schema-definition.d.ts

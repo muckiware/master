@@ -1,0 +1,22 @@
+{
+  "sw-settings-admin-interface": {
+    "general": {
+      "mainMenuItemGeneral": "Administrationsoberfläche",
+      "description": "Hier kann die Administrationsoberfläche eingestellt werden, z. B. die sichtbaren Hauptmenüpunkte.",
+      "textHeadline": "Administrationsoberfläche",
+      "buttonSave": "Speichern",
+      "messageSaveSuccess": "Die Einstellungen wurden gespeichert. Das Hauptmenü wurde aktualisiert."
+    },
+    "mainMenu": {
+      "cardTitle": "Hauptmenü",
+      "description": "Lege fest, welche Einträge im Hauptmenü angezeigt werden. Die Einstellung gilt für alle Benutzer. Ausgeblendete Module bleiben über ihre URL und die Suche erreichbar, der Zugriff wird weiterhin über die Benutzerrechte gesteuert.",
+      "helpTextLocked": "Dieser Eintrag kann nicht ausgeblendet werden, da sonst die Einstellungen nicht mehr erreichbar wären.",
+      "emptyState": "Keine Hauptmenüpunkte gefunden."
+    },
+    "frontendsMenu": {
+      "cardTitle": "Menüblock Frontends",
+      "description": "Blendet den Block \"Frontends\" unterhalb des Hauptmenüs ein oder aus. Die Einstellung gilt für alle Benutzer. Die Frontends bleiben über ihre URL erreichbar.",
+      "labelShow": "Block \"Frontends\" im Menü anzeigen"
+    }
+  }
+}

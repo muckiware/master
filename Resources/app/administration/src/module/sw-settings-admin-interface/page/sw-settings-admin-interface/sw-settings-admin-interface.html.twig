@@ -1,0 +1,110 @@
+{% block sw_settings_admin_interface_index %}
+<sw-page class="sw-settings-admin-interface">
+
+    {% block sw_settings_admin_interface_search_bar %}
+    <template #search-bar>
+        <sw-search-bar />
+    </template>
+    {% endblock %}
+
+    {% block sw_settings_admin_interface_smart_bar_header %}
+    <template #smart-bar-header>
+        <h2>
+            {{ $tc('sw-settings.index.title') }}
+            <mt-icon
+                name="regular-chevron-right-xs"
+                size="12px"
+            />
+            {{ $tc('sw-settings-admin-interface.general.textHeadline') }}
+        </h2>
+    </template>
+    {% endblock %}
+
+    {% block sw_settings_admin_interface_smart_bar_actions %}
+    <template #smart-bar-actions>
+        <sw-button-process
+            class="sw-settings-admin-interface__save-action"
+            :is-loading="isLoading"
+            :process-success="isSaveSuccessful"
+            :disabled="isLoading || !acl.can('system.system_config')"
+            variant="primary"
+            @update:process-success="saveFinish"
+            @click="onSave"
+        >
+            {{ $tc('sw-settings-admin-interface.general.buttonSave') }}
+        </sw-button-process>
+    </template>
+    {% endblock %}
+
+    {% block sw_settings_admin_interface_content %}
+    <template #content>
+        <sw-card-view>
+
+            {% block sw_settings_admin_interface_main_menu_card %}
+            <mt-card
+                class="sw-settings-admin-interface__main-menu"
+                position-identifier="sw-settings-admin-interface-main-menu"
+                :title="$tc('sw-settings-admin-interface.mainMenu.cardTitle')"
+                :is-loading="isLoading"
+            >
+                <p class="sw-settings-admin-interface__description">
+                    {{ $tc('sw-settings-admin-interface.mainMenu.description') }}
+                </p>
+
+                <p
+                    v-if="mainMenuEntries.length === 0"
+                    class="sw-settings-admin-interface__empty"
+                >
+                    {{ $tc('sw-settings-admin-interface.mainMenu.emptyState') }}
+                </p>
+
+                {% block sw_settings_admin_interface_main_menu_entries %}
+                <div
+                    v-for="entry in mainMenuEntries"
+                    :key="entry.menuId"
+                    class="sw-settings-admin-interface__entry"
+                >
+                    <mt-icon
+                        v-if="entry.icon"
+                        class="sw-settings-admin-interface__entry-icon"
+                        :name="entry.icon"
+                        size="16px"
+                    />
+                    <mt-switch
+                        class="sw-settings-admin-interface__entry-switch"
+                        :model-value="isVisible(entry)"
+                        :label="getEntryLabel(entry)"
+                        :disabled="isLocked(entry) || !acl.can('system.system_config')"
+                        :help-text="isLocked(entry) ? $tc('sw-settings-admin-interface.mainMenu.helpTextLocked') : null"
+                        @update:model-value="onToggleEntry(entry, $event)"
+                    />
+                </div>
+                {% endblock %}
+            </mt-card>
+            {% endblock %}
+
+            {% block sw_settings_admin_interface_frontends_menu_card %}
+            <mt-card
+                class="sw-settings-admin-interface__frontends-menu"
+                position-identifier="sw-settings-admin-interface-frontends-menu"
+                :title="$tc('sw-settings-admin-interface.frontendsMenu.cardTitle')"
+                :is-loading="isLoading"
+            >
+                <p class="sw-settings-admin-interface__description">
+                    {{ $tc('sw-settings-admin-interface.frontendsMenu.description') }}
+                </p>
+
+                <mt-switch
+                    v-model="showFrontendsMenu"
+                    class="sw-settings-admin-interface__frontends-menu-switch"
+                    :label="$tc('sw-settings-admin-interface.frontendsMenu.labelShow')"
+                    :disabled="!acl.can('system.system_config')"
+                />
+            </mt-card>
+            {% endblock %}
+
+        </sw-card-view>
+    </template>
+    {% endblock %}
+</sw-page>
+{% endblock %}

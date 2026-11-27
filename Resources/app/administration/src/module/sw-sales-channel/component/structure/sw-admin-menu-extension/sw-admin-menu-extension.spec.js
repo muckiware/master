@@ -54,6 +54,10 @@ describe('module/sw-sales-channel/component/structure/sw-admin-menu-extension', 
         Shopware.Store.get('session').setCurrentUser({});
     });
 
+    beforeEach(() => {
+        Shopware.Store.get('adminInterface').$reset();
+    });
+
     it('should not show the sw-sales-channel-menu when privilege does not exist', async () => {
         global.activeAclRoles = [];
         const wrapper = await createWrapper();
@@ -63,11 +67,30 @@ describe('module/sw-sales-channel/component/structure/sw-admin-menu-extension', 
         expect(swSalesChannelMenu.exists()).toBeFalsy();
     });
 
-    it('should show the sw-sales-channel-menu when privilege exists', async () => {
+    it('should show the sw-sales-channel-menu when privilege exists and it is enabled', async () => {
         global.activeAclRoles = ['sales_channel.viewer'];
         const wrapper = await createWrapper();
+        Shopware.Store.get('adminInterface').showFrontendsMenu = true;
+        await wrapper.vm.$nextTick();
         const swSalesChannelMenu = wrapper.find('sw-sales-channel-menu-stub');
 
         expect(swSalesChannelMenu.exists()).toBeTruthy();
+    });
+
+    it('should not show the sw-sales-channel-menu when it is hidden in the admin interface settings', async () => {
+        global.activeAclRoles = ['sales_channel.viewer'];
+        const wrapper = await createWrapper();
+        Shopware.Store.get('adminInterface').showFrontendsMenu = false;
+        await wrapper.vm.$nextTick();
+
+        expect(wrapper.find('sw-sales-channel-menu-stub').exists()).toBeFalsy();
+    });
+
+    it('should not show the sw-sales-channel-menu by default', async () => {
+        global.activeAclRoles = ['sales_channel.viewer'];
+        const wrapper = await createWrapper();
+        await wrapper.vm.$nextTick();
+
+        expect(wrapper.find('sw-sales-channel-menu-stub').exists()).toBeFalsy();
     });
 });

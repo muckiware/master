@@ -297,6 +297,29 @@ describe('src/app/component/structure/sw-admin-menu', () => {
         });
     });
 
+    it('should not render top level entries hidden in the admin interface settings', async () => {
+        Shopware.Store.get('adminInterface').hiddenMainMenuEntries = ['sw.second.top.level'];
+        await flushPromises();
+
+        const topLevelEntries = wrapper.findAllComponents('.navigation-list-item__level-1');
+        expect(topLevelEntries.map((entry) => entry.text()).join()).not.toContain('second top level entry');
+
+        Shopware.Store.get('adminInterface').hiddenMainMenuEntries = [];
+    });
+
+    it('should never hide locked top level entries', async () => {
+        const store = Shopware.Store.get('adminInterface');
+        store.lockedMainMenuEntries = ['sw.second.top.level'];
+        store.hiddenMainMenuEntries = ['sw.second.top.level'];
+        await flushPromises();
+
+        const topLevelEntries = wrapper.findAllComponents('.navigation-list-item__level-1');
+        expect(topLevelEntries.at(0).text()).toContain('second top level entry');
+
+        store.hiddenMainMenuEntries = [];
+        store.lockedMainMenuEntries = ['sw-settings'];
+    });
+
     it('should render third level menu correctly', async () => {
         const thirdLevelEntries = wrapper.findAll('.navigation-list-item__level-3');
 
