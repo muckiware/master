@@ -1,0 +1,52 @@
+# Runs the Jest unit tests of the administration on every pull request and on pushes to main.
+#
+# The Jest environment needs test/_mocks_/entity-schema.json, which is normally generated from a
+# running installation (bin/build-administration.sh). CI has none, so `npm run unit-setup` copies the
+# committed snapshot test/_fixtures_/entity-schema.json instead. After entity changes, refresh it in a
+# project with `bin/build-administration.sh` and `npm run update-entity-schema-fixture`.
+#
+# Specs listed in jest.known-failures.js (shop features that do not exist in Muckidrive) are skipped.
+
+name: "Administration unit tests"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: admin-unit-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  jest:
+    name: Jest
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: Resources/app/administration
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: Resources/app/administration/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Prepare test environment
+        run: npm run unit-setup
+
+      - name: Run Jest
+        run: npm run unit:ci -- --coverage=false

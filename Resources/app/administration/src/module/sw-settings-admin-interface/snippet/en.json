@@ -1,0 +1,22 @@
+{
+  "sw-settings-admin-interface": {
+    "general": {
+      "mainMenuItemGeneral": "Administration interface",
+      "description": "Configure the administration interface, e.g. the visible main menu entries.",
+      "textHeadline": "Administration interface",
+      "buttonSave": "Save",
+      "messageSaveSuccess": "The settings have been saved. The main menu has been updated."
+    },
+    "mainMenu": {
+      "cardTitle": "Main menu",
+      "description": "Choose which entries are shown in the main menu. The setting applies to all users. Hidden modules remain reachable via their URL and the search, access is still controlled by the user permissions.",
+      "helpTextLocked": "This entry cannot be hidden, otherwise the settings would no longer be reachable.",
+      "emptyState": "No main menu entries found."
+    },
+    "frontendsMenu": {
+      "cardTitle": "Frontends menu block",
+      "description": "Shows or hides the \"Frontends\" block below the main menu. The setting applies to all users. The frontends remain reachable via the URL.",
+      "labelShow": "Show \"Frontends\" block in the menu"
+    }
+  }
+}
